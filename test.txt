@@ -1,0 +1,2137 @@
+gbnnode.py:
+
+Commands:
+python gbnnode.py 1111 2222 3 -p 0.3
+python gbnnode.py 2222 1111 3 -p 0.3
+
+Results: (send abcdefg)
+Sender:
+[1701900704.856885] packet0 a sent
+[1701900704.8579452] packet1 b sent
+[1701900704.8583848] packet2 c sent
+[1701900704.867042] ACK0 discarded
+[1701900705.356501] packet0 timeout
+[1701900705.357165] packet0 a sent
+[1701900705.357413] packet1 b sent
+[1701900705.3576581] packet2 c sent
+[1701900705.364015] ACK0 received, window moves to 1
+[1701900705.364046] ACK1 received, window moves to 2
+[1701900705.364058] ACK2 received, window moves to 3
+[1701900705.3643022] packet3 d sent
+[1701900705.364544] packet4 e sent
+[1701900705.364585] ACK3 discarded
+[1701900705.3646889] packet5 f sent
+[1701900705.371116] ACK4 discarded
+[1701900705.8635] packet3 timeout
+[1701900705.8640058] packet3 d sent
+[1701900705.8642151] packet4 e sent
+[1701900705.8644228] packet5 f sent
+[1701900705.870765] ACK4 received, window moves to 5
+[1701900705.870801] ACK4 received, window moves to 5
+[1701900705.870956] packet6 g sent
+[1701900706.370502] packet5 timeout
+[1701900706.370991] packet5 f sent
+[1701900706.37119] packet6 g sent
+[1701900706.376884] ACK5 discarded
+[1701900706.389473] ACK6 received, window moves to 7
+[summary] 4/15 packets discarded, loss rate = 0.26666666666666666
+Receiver:
+[1701900704.857871] packet0 a received
+[1701900704.860594] ACK0 sent, expecting packet1
+[1701900704.860683] packet1 b received
+[1701900704.860697] packet1 b discarded
+[1701900704.860717] packet2 c received
+[1701900704.860723] packet2 c discarded
+[1701900705.357297] packet0 a received
+[1701900705.357682] ACK0 sent, expecting packet1
+[1701900705.357708] packet1 b received
+[1701900705.35792] ACK1 sent, expecting packet2
+[1701900705.3579361] packet2 c received
+[1701900705.358121] ACK2 sent, expecting packet3
+[1701900705.364367] packet3 d received
+[1701900705.364547] ACK3 sent, expecting packet4
+[1701900705.36465] packet4 e received
+[1701900705.364803] ACK4 sent, expecting packet5
+[1701900705.364823] packet5 f received
+[1701900705.364827] packet5 f discarded
+[1701900705.864109] packet3 d received
+[1701900705.864435] ACK4 sent, expecting packet5
+[1701900705.864459] packet4 e received
+[1701900705.864641] ACK4 sent, expecting packet5
+[1701900705.864661] packet5 f received
+[1701900705.864664] packet5 f discarded
+[1701900705.871008] packet6 g received
+[1701900705.8710132] packet6 g discarded
+[1701900706.371103] packet5 f received
+[1701900706.37136] ACK5 sent, expecting packet6
+[1701900706.371378] packet6 g received
+[1701900706.371531] ACK6 sent, expecting packet7
+[summary] 5/15 packets droped, loss rate = 0.3333333333333333
+
+Commands:
+python gbnnode.py 1111 2222 3 -p 0
+python gbnnode.py 2222 1111 3 -p 0
+
+Results: (send abcdefg)
+Sender:
+[1701901099.537643] packet0 a sent
+[1701901099.538201] packet1 b sent
+[1701901099.5384161] packet2 c sent
+[1701901099.546695] ACK0 received, window moves to 1
+[1701901099.546842] ACK1 received, window moves to 2
+[1701901099.546873] ACK2 received, window moves to 3
+[1701901099.547033] packet3 d sent
+[1701901099.547303] packet4 e sent
+[1701901099.5473652] ACK3 received, window moves to 4
+[1701901099.547552] packet5 f sent
+[1701901099.547644] ACK4 received, window moves to 5
+[1701901099.547792] packet6 g sent
+[1701901099.553556] ACK5 received, window moves to 6
+[1701901099.5661829] ACK6 received, window moves to 7
+[summary] 0/7 packets discarded, loss rate = 0.0
+Receiver:
+[1701901099.537973] packet0 a received
+[1701901099.540287] ACK0 sent, expecting packet1
+[1701901099.540395] packet1 b received
+[1701901099.540682] ACK1 sent, expecting packet2
+[1701901099.540761] packet2 c received
+[1701901099.54097] ACK2 sent, expecting packet3
+[1701901099.547082] packet3 d received
+[1701901099.547303] ACK3 sent, expecting packet4
+[1701901099.547355] packet4 e received
+[1701901099.547554] ACK4 sent, expecting packet5
+[1701901099.547601] packet5 f received
+[1701901099.547798] ACK5 sent, expecting packet6
+[1701901099.54784] packet6 g received
+[1701901099.548018] ACK6 sent, expecting packet7
+[summary] 0/7 packets droped, loss rate = 0.0
+
+Commands:
+python gbnnode.py 1111 2222 3 -p 1
+python gbnnode.py 2222 1111 3 -p 1
+
+Results:
+Sender:
+[1701903110.8019881] packet0 a sent
+[1701903110.8024251] packet1 b sent
+[1701903110.802659] packet2 c sent
+[1701903111.301502] packet0 timeout
+[1701903111.3020859] packet0 a sent
+[1701903111.302306] packet1 b sent
+[1701903111.302464] packet2 c sent
+[1701903111.801501] packet0 timeout
+[1701903111.80193] packet0 a sent
+[1701903111.802171] packet1 b sent
+[1701903111.8023438] packet2 c sent
+[1701903112.301501] packet0 timeout
+[1701903112.301845] packet0 a sent
+[1701903112.302007] packet1 b sent
+[1701903112.3021529] packet2 c sent
+[1701903112.801501] packet0 timeout
+[1701903112.802073] packet0 a sent
+[1701903112.802312] packet1 b sent
+[1701903112.802482] packet2 c sent
+[1701903113.301501] packet0 timeout
+[summary] 5/5 packets lost, loss rate = 1
+
+Receiver:
+[1701903110.802171] packet0 a received
+[1701903110.802233] packet0 a discarded
+[1701903110.802492] packet1 b received
+[1701903110.802508] packet1 b discarded
+[1701903110.8027232] packet2 c received
+[1701903110.802746] packet2 c discarded
+[1701903111.3021939] packet0 a received
+[1701903111.302211] packet0 a discarded
+[1701903111.302359] packet1 b received
+[1701903111.302368] packet1 b discarded
+[1701903111.302509] packet2 c received
+[1701903111.302515] packet2 c discarded
+[1701903111.80202] packet0 a received
+[1701903111.802033] packet0 a discarded
+[1701903111.802321] packet1 b received
+[1701903111.802355] packet1 b discarded
+[1701903111.802378] packet2 c received
+[1701903111.802381] packet2 c discarded
+[1701903112.3019142] packet0 a received
+[1701903112.301928] packet0 a discarded
+[1701903112.302042] packet1 b received
+[1701903112.30205] packet1 b discarded
+[1701903112.302182] packet2 c received
+[1701903112.302189] packet2 c discarded
+[1701903112.8021739] packet0 a received
+[1701903112.802201] packet0 a discarded
+[1701903112.802359] packet1 b received
+[1701903112.8023639] packet1 b discarded
+[1701903112.8025322] packet2 c received
+[1701903112.802538] packet2 c discarded
+[summary] 15/15 packets droped, loss rate = 1.0
+
+Commands:
+python gbnnode.py 1111 2222 5 -d 3
+python gbnnode.py 2222 1111 5 -d 3
+
+Results: (send abcdefg)
+Sender:
+send abcdefg
+[1701904176.663863] packet0 a sent
+[1701904176.664187] packet1 b sent
+[1701904176.664361] packet2 c sent
+[1701904176.664542] packet3 d sent
+[1701904176.66467] packet4 e sent
+[1701904176.671912] ACK0 received, window moves to 1
+[1701904176.672053] ACK1 received, window moves to 2
+[1701904176.672083] ACK1 discarded
+[1701904176.6720982] ACK1 received, window moves to 2
+[1701904176.6722062] packet5 f sent
+[1701904176.672399] packet6 g sent
+[1701904176.67896] ACK1 received, window moves to 2
+[1701904177.1715012] packet2 timeout
+[1701904177.172043] packet2 c sent
+[1701904177.172394] packet3 d sent
+[1701904177.172481] ACK2 discarded
+[1701904177.1725829] packet4 e sent
+[1701904177.172895] packet5 f sent
+[1701904177.172986] ACK2 received, window moves to 3
+[1701904177.173114] packet6 g sent
+[1701904177.179455] ACK2 received, window moves to 3
+[1701904177.672501] packet3 timeout
+[1701904177.67281] packet3 d sent
+[1701904177.672959] packet4 e sent
+[1701904177.673088] packet5 f sent
+[1701904177.673137] ACK3 discarded
+[1701904177.6732612] packet6 g sent
+[1701904177.679591] ACK4 received, window moves to 5
+[1701904177.685893] ACK4 received, window moves to 5
+[1701904178.1795] packet5 timeout
+[1701904178.180033] packet5 f sent
+[1701904178.180296] packet6 g sent
+[1701904178.1855931] ACK5 discarded
+[1701904178.6795] packet5 timeout
+[1701904178.67995] packet5 f sent
+[1701904178.680327] packet6 g sent
+[1701904178.6867049] ACK5 received, window moves to 6
+[1701904178.699307] ACK6 received, window moves to 7
+[summary] 4/20 packets discarded, loss rate = 0.2
+
+Receiver:
+[1701904176.663994] packet0 a received
+[1701904176.665519] ACK0 sent, expecting packet1
+[1701904176.6656058] packet1 b received
+[1701904176.66583] ACK1 sent, expecting packet2
+[1701904176.6658618] packet2 c received
+[1701904176.6658702] packet2 c discarded
+[1701904176.6658828] packet3 d received
+[1701904176.6660779] ACK1 sent, expecting packet2
+[1701904176.6661289] packet4 e received
+[1701904176.666327] ACK1 sent, expecting packet2
+[1701904176.6722822] packet5 f received
+[1701904176.672307] packet5 f discarded
+[1701904176.6724448] packet6 g received
+[1701904176.672626] ACK1 sent, expecting packet2
+[1701904177.1721432] packet2 c received
+[1701904177.172404] ACK2 sent, expecting packet3
+[1701904177.172458] packet3 d received
+[1701904177.172467] packet3 d discarded
+[1701904177.17263] packet4 e received
+[1701904177.172909] ACK2 sent, expecting packet3
+[1701904177.172927] packet5 f received
+[1701904177.173119] ACK2 sent, expecting packet3
+[1701904177.17315] packet6 g received
+[1701904177.173154] packet6 g discarded
+[1701904177.6728861] packet3 d received
+[1701904177.673106] ACK3 sent, expecting packet4
+[1701904177.673132] packet4 e received
+[1701904177.673267] ACK4 sent, expecting packet5
+[1701904177.673276] packet5 f received
+[1701904177.673279] packet5 f discarded
+[1701904177.673284] packet6 g received
+[1701904177.673392] ACK4 sent, expecting packet5
+[1701904178.180165] packet5 f received
+[1701904178.180448] ACK5 sent, expecting packet6
+[1701904178.18047] packet6 g received
+[1701904178.180474] packet6 g discarded
+[1701904178.6800342] packet5 f received
+[1701904178.68035] ACK5 sent, expecting packet6
+[1701904178.680386] packet6 g received
+[1701904178.680604] ACK6 sent, expecting packet7
+[summary] 6/20 packets droped, loss rate = 0.3
+
+
+dvnode.py:
+
+Commands:
+python dvnode.py 1111 2222 0.1 3333 0.5
+python dvnode.py 2222 1111 0.1 3333 0.2 4444 0.8
+python dvnode.py 3333 1111 0.5 2222 0.2 4444 0.5
+python dvnode.py 4444 2222 0.8 3333 0.5 last
+
+Results:
+Node 1111:
+[1701906039.850515] Message sent from Node 1111 to Node 2222
+[1701906039.852739] Message sent from Node 1111 to Node 3333
+[1701906039.853045] Node 1111 Routing Table
+- (0.1) -> Node 2222
+- (0.3) -> Node 3333; Next hop -> Node 2222
+- (0.9) -> Node 4444; Next hop -> Node 2222
+[1701906039.85315] Message sent from Node 1111 to Node 2222
+[1701906039.8535] Message sent from Node 1111 to Node 3333
+[1701906039.853764] Node 1111 Routing Table
+- (0.1) -> Node 2222
+- (0.3) -> Node 3333; Next hop -> Node 2222
+- (0.8) -> Node 4444; Next hop -> Node 3333
+[1701906039.853872] Message sent from Node 1111 to Node 2222
+[1701906039.854094] Message sent from Node 1111 to Node 3333
+[1701906039.854301] Node 1111 Routing Table
+- (0.1) -> Node 2222
+- (0.3) -> Node 3333; Next hop -> Node 2222
+- (0.8) -> Node 4444; Next hop -> Node 2222
+[1701906040.702322] Node 1111 Routing Table
+- (0.1) -> Node 2222
+- (0.3) -> Node 3333; Next hop -> Node 2222
+- (0.8) -> Node 4444; Next hop -> Node 2222
+[1701906043.8865018] Message sent from Node 1111 to Node 2222
+[1701906043.887423] Message sent from Node 1111 to Node 3333
+[1701906044.856168] Node 1111 Routing Table
+- (0.1) -> Node 2222
+- (0.3) -> Node 3333; Next hop -> Node 2222
+- (0.8) -> Node 4444; Next hop -> Node 2222
+[1701906045.707218] Node 1111 Routing Table
+- (0.1) -> Node 2222
+- (0.3) -> Node 3333; Next hop -> Node 2222
+- (0.8) -> Node 4444; Next hop -> Node 2222
+[1701906048.891198] Message sent from Node 1111 to Node 2222
+[1701906048.8918989] Message sent from Node 1111 to Node 3333
+[1701906053.896624] Node 1111 Routing Table
+- (0.1) -> Node 2222
+- (0.3) -> Node 3333; Next hop -> Node 2222
+- (0.8) -> Node 4444; Next hop -> Node 2222
+
+Node 2222:
+[1701906036.538374] Node 2222 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 3333
+- (0.8) -> Node 4444
+[1701906039.8465972] Message sent from Node 2222 to Node 1111
+[1701906039.849762] Message sent from Node 2222 to Node 3333
+[1701906039.850322] Message sent from Node 2222 to Node 4444
+[1701906039.8515468] Node 2222 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 3333
+- (0.8) -> Node 4444
+[1701906039.8528051] Node 2222 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 3333
+- (0.8) -> Node 4444
+[1701906039.8531232] Message sent from Node 2222 to Node 1111
+[1701906039.853503] Message sent from Node 2222 to Node 3333
+[1701906039.85375] Message sent from Node 2222 to Node 4444
+[1701906039.853911] Node 2222 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 3333
+- (0.7) -> Node 4444; Next hop -> Node 3333
+[1701906039.853964] Node 2222 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 3333
+- (0.7) -> Node 4444; Next hop -> Node 3333
+[1701906039.853997] Node 2222 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 3333
+- (0.7) -> Node 4444; Next hop -> Node 3333
+[1701906039.854134] Node 2222 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 3333
+- (0.7) -> Node 4444; Next hop -> Node 3333
+[1701906039.8542452] Node 2222 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 3333
+- (0.7) -> Node 4444; Next hop -> Node 3333
+[1701906040.702501] Node 2222 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 3333
+- (0.7) -> Node 4444; Next hop -> Node 3333
+[1701906041.540747] Node 2222 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 3333
+- (0.7) -> Node 4444; Next hop -> Node 3333
+[1701906043.887757] Node 2222 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 3333
+- (0.7) -> Node 4444; Next hop -> Node 3333
+[1701906044.855073] Message sent from Node 2222 to Node 1111
+[1701906044.855874] Message sent from Node 2222 to Node 3333
+[1701906044.856268] Message sent from Node 2222 to Node 4444
+[1701906045.707453] Node 2222 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 3333
+- (0.7) -> Node 4444; Next hop -> Node 3333
+[1701906046.5467362] Node 2222 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 3333
+- (0.7) -> Node 4444; Next hop -> Node 3333
+[1701906048.892061] Node 2222 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 3333
+- (0.7) -> Node 4444; Next hop -> Node 3333
+[1701906049.8617449] Node 2222 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 3333
+- (0.7) -> Node 4444; Next hop -> Node 3333
+
+Node 3333:
+[1701906036.538495] Node 3333 Routing Table
+- (0.5) -> Node 1111
+- (0.2) -> Node 2222
+- (0.5) -> Node 4444
+[1701906039.850532] Message sent from Node 3333 to Node 1111
+[1701906039.852672] Message sent from Node 3333 to Node 2222
+[1701906039.8529751] Message sent from Node 3333 to Node 4444
+[1701906039.853166] Node 3333 Routing Table
+- (0.3) -> Node 1111; Next hop -> Node 2222
+- (0.2) -> Node 2222
+- (0.5) -> Node 4444
+[1701906039.853227] Node 3333 Routing Table
+- (0.3) -> Node 1111; Next hop -> Node 2222
+- (0.2) -> Node 2222
+- (0.5) -> Node 4444
+[1701906039.8532622] Node 3333 Routing Table
+- (0.3) -> Node 1111; Next hop -> Node 2222
+- (0.2) -> Node 2222
+- (0.5) -> Node 4444
+[1701906039.853834] Node 3333 Routing Table
+- (0.3) -> Node 1111; Next hop -> Node 2222
+- (0.2) -> Node 2222
+- (0.5) -> Node 4444
+[1701906039.8539] Node 3333 Routing Table
+- (0.3) -> Node 1111; Next hop -> Node 2222
+- (0.2) -> Node 2222
+- (0.5) -> Node 4444
+[1701906039.853945] Node 3333 Routing Table
+- (0.3) -> Node 1111; Next hop -> Node 2222
+- (0.2) -> Node 2222
+- (0.5) -> Node 4444
+[1701906039.854366] Node 3333 Routing Table
+- (0.3) -> Node 1111; Next hop -> Node 2222
+- (0.2) -> Node 2222
+- (0.5) -> Node 4444
+[1701906039.854413] Node 3333 Routing Table
+- (0.3) -> Node 1111; Next hop -> Node 2222
+- (0.2) -> Node 2222
+- (0.5) -> Node 4444
+[1701906040.70183] Message sent from Node 3333 to Node 1111
+[1701906040.702214] Message sent from Node 3333 to Node 2222
+[1701906040.702415] Message sent from Node 3333 to Node 4444
+[1701906041.541056] Node 3333 Routing Table
+- (0.3) -> Node 1111; Next hop -> Node 2222
+- (0.2) -> Node 2222
+- (0.5) -> Node 4444
+[1701906043.888183] Node 3333 Routing Table
+- (0.3) -> Node 1111; Next hop -> Node 2222
+- (0.2) -> Node 2222
+- (0.5) -> Node 4444
+[1701906044.856555] Node 3333 Routing Table
+- (0.3) -> Node 1111; Next hop -> Node 2222
+- (0.2) -> Node 2222
+- (0.5) -> Node 4444
+[1701906045.706461] Message sent from Node 3333 to Node 1111
+[1701906045.707068] Message sent from Node 3333 to Node 2222
+[1701906045.7073421] Message sent from Node 3333 to Node 4444
+[1701906046.546929] Node 3333 Routing Table
+- (0.3) -> Node 1111; Next hop -> Node 2222
+- (0.2) -> Node 2222
+- (0.5) -> Node 4444
+[1701906048.892329] Node 3333 Routing Table
+- (0.3) -> Node 1111; Next hop -> Node 2222
+- (0.2) -> Node 2222
+- (0.5) -> Node 4444
+[1701906050.71185] Node 3333 Routing Table
+- (0.3) -> Node 1111; Next hop -> Node 2222
+- (0.2) -> Node 2222
+- (0.5) -> Node 4444
+
+Node 4444:
+[1701906036.537143] Message sent from Node 4444 to Node 2222
+[1701906036.5382469] Message sent from Node 4444 to Node 3333
+[1701906039.850932] Message sent from Node 4444 to Node 2222
+[1701906039.851454] Message sent from Node 4444 to Node 3333
+[1701906039.851743] Node 4444 Routing Table
+- (0.8) -> Node 2222
+- (0.5) -> Node 3333
+- (0.9) -> Node 1111; Next hop -> Node 2222
+[1701906039.853285] Message sent from Node 4444 to Node 2222
+[1701906039.853473] Message sent from Node 4444 to Node 3333
+[1701906039.853745] Node 4444 Routing Table
+- (0.7) -> Node 2222; Next hop -> Node 3333
+- (0.5) -> Node 3333
+- (0.8) -> Node 1111; Next hop -> Node 3333
+[1701906039.854006] Message sent from Node 4444 to Node 2222
+[1701906039.854207] Message sent from Node 4444 to Node 3333
+[1701906039.854382] Node 4444 Routing Table
+- (0.7) -> Node 2222; Next hop -> Node 3333
+- (0.5) -> Node 3333
+- (0.8) -> Node 1111; Next hop -> Node 2222
+[1701906040.702677] Node 4444 Routing Table
+- (0.7) -> Node 2222; Next hop -> Node 3333
+- (0.5) -> Node 3333
+- (0.8) -> Node 1111; Next hop -> Node 2222
+[1701906041.5400488] Message sent from Node 4444 to Node 2222
+[1701906041.540632] Message sent from Node 4444 to Node 3333
+[1701906044.85684] Node 4444 Routing Table
+- (0.7) -> Node 2222; Next hop -> Node 3333
+- (0.5) -> Node 3333
+- (0.8) -> Node 1111; Next hop -> Node 2222
+[1701906045.70767] Node 4444 Routing Table
+- (0.7) -> Node 2222; Next hop -> Node 3333
+- (0.5) -> Node 3333
+- (0.8) -> Node 1111; Next hop -> Node 2222
+[1701906046.546062] Message sent from Node 4444 to Node 2222
+[1701906046.546588] Message sent from Node 4444 to Node 3333
+[1701906051.54936] Node 4444 Routing Table
+- (0.7) -> Node 2222; Next hop -> Node 3333
+- (0.5) -> Node 3333
+- (0.8) -> Node 1111; Next hop -> Node 2222
+
+Commands:
+python dvnode.py 1111 2222 0.2 3333 0.1
+python dvnode.py 2222 1111 0.2 3333 0.2 4444 0.3
+python dvnode.py 3333 1111 0.1 2222 0.2 4444 0.3 5555 0.1
+python dvnode.py 4444 2222 0.3 3333 0.3 5555 0.1 6666 0.5
+python dvnode.py 5555 3333 0.1 4444 0.1 6666 0.2
+python dvnode.py 6666 4444 0.5 5555 0.2 last
+
+Results:
+Node 1111:
+[1701906192.0169542] Message sent from Node 1111 to Node 2222
+[1701906192.017816] Message sent from Node 1111 to Node 3333
+[1701906192.0181718] Node 1111 Routing Table
+- (0.2) -> Node 2222
+- (0.1) -> Node 3333
+- (0.5) -> Node 4444; Next hop -> Node 2222
+- (0.6) -> Node 5555; Next hop -> Node 2222
+- (1.0) -> Node 6666; Next hop -> Node 2222
+[1701906192.018235] Message sent from Node 1111 to Node 2222
+[1701906192.0184672] Message sent from Node 1111 to Node 3333
+[1701906192.018944] Node 1111 Routing Table
+- (0.2) -> Node 2222
+- (0.1) -> Node 3333
+- (0.4) -> Node 4444; Next hop -> Node 3333
+- (0.2) -> Node 5555; Next hop -> Node 3333
+- (0.9) -> Node 6666; Next hop -> Node 3333
+[1701906192.018985] Node 1111 Routing Table
+- (0.2) -> Node 2222
+- (0.1) -> Node 3333
+- (0.4) -> Node 4444; Next hop -> Node 3333
+- (0.2) -> Node 5555; Next hop -> Node 3333
+- (0.9) -> Node 6666; Next hop -> Node 3333
+[1701906192.019027] Message sent from Node 1111 to Node 2222
+[1701906192.019186] Message sent from Node 1111 to Node 3333
+[1701906192.019391] Node 1111 Routing Table
+- (0.2) -> Node 2222
+- (0.1) -> Node 3333
+- (0.3) -> Node 4444; Next hop -> Node 3333
+- (0.2) -> Node 5555; Next hop -> Node 3333
+- (0.4) -> Node 6666; Next hop -> Node 3333
+[1701906192.01942] Node 1111 Routing Table
+- (0.2) -> Node 2222
+- (0.1) -> Node 3333
+- (0.3) -> Node 4444; Next hop -> Node 3333
+- (0.2) -> Node 5555; Next hop -> Node 3333
+- (0.4) -> Node 6666; Next hop -> Node 3333
+[1701906195.380388] Message sent from Node 1111 to Node 2222
+[1701906195.381203] Message sent from Node 1111 to Node 3333
+[1701906195.940514] Node 1111 Routing Table
+- (0.2) -> Node 2222
+- (0.1) -> Node 3333
+- (0.3) -> Node 4444; Next hop -> Node 3333
+- (0.2) -> Node 5555; Next hop -> Node 3333
+- (0.4) -> Node 6666; Next hop -> Node 3333
+[1701906196.484123] Node 1111 Routing Table
+- (0.2) -> Node 2222
+- (0.1) -> Node 3333
+- (0.3) -> Node 4444; Next hop -> Node 3333
+- (0.2) -> Node 5555; Next hop -> Node 3333
+- (0.4) -> Node 6666; Next hop -> Node 3333
+[1701906200.386754] Message sent from Node 1111 to Node 2222
+[1701906200.3876228] Message sent from Node 1111 to Node 3333
+[1701906200.947156] Node 1111 Routing Table
+- (0.2) -> Node 2222
+- (0.1) -> Node 3333
+- (0.3) -> Node 4444; Next hop -> Node 3333
+- (0.2) -> Node 5555; Next hop -> Node 3333
+- (0.4) -> Node 6666; Next hop -> Node 3333
+[1701906201.4898849] Node 1111 Routing Table
+- (0.2) -> Node 2222
+- (0.1) -> Node 3333
+- (0.3) -> Node 4444; Next hop -> Node 3333
+- (0.2) -> Node 5555; Next hop -> Node 3333
+- (0.4) -> Node 6666; Next hop -> Node 3333
+[1701906205.39304] Node 1111 Routing Table
+- (0.2) -> Node 2222
+- (0.1) -> Node 3333
+- (0.3) -> Node 4444; Next hop -> Node 3333
+- (0.2) -> Node 5555; Next hop -> Node 3333
+- (0.4) -> Node 6666; Next hop -> Node 3333
+
+Node 2222:
+[1701906192.015866] Message sent from Node 2222 to Node 1111
+[1701906192.0168378] Message sent from Node 2222 to Node 3333
+[1701906192.017065] Message sent from Node 2222 to Node 4444
+[1701906192.017348] Node 2222 Routing Table
+- (0.2) -> Node 1111
+- (0.2) -> Node 3333
+- (0.3) -> Node 4444
+- (0.4) -> Node 5555; Next hop -> Node 4444
+- (0.8) -> Node 6666; Next hop -> Node 4444
+[1701906192.0174022] Message sent from Node 2222 to Node 1111
+[1701906192.01761] Message sent from Node 2222 to Node 3333
+[1701906192.017869] Message sent from Node 2222 to Node 4444
+[1701906192.0181398] Node 2222 Routing Table
+- (0.2) -> Node 1111
+- (0.2) -> Node 3333
+- (0.3) -> Node 4444
+- (0.3) -> Node 5555; Next hop -> Node 3333
+- (0.8) -> Node 6666; Next hop -> Node 4444
+[1701906192.0181901] Node 2222 Routing Table
+- (0.2) -> Node 1111
+- (0.2) -> Node 3333
+- (0.3) -> Node 4444
+- (0.3) -> Node 5555; Next hop -> Node 3333
+- (0.8) -> Node 6666; Next hop -> Node 4444
+[1701906192.01822] Node 2222 Routing Table
+- (0.2) -> Node 1111
+- (0.2) -> Node 3333
+- (0.3) -> Node 4444
+- (0.3) -> Node 5555; Next hop -> Node 3333
+- (0.8) -> Node 6666; Next hop -> Node 4444
+[1701906192.018259] Message sent from Node 2222 to Node 1111
+[1701906192.0184371] Message sent from Node 2222 to Node 3333
+[1701906192.01892] Message sent from Node 2222 to Node 4444
+[1701906192.019176] Node 2222 Routing Table
+- (0.2) -> Node 1111
+- (0.2) -> Node 3333
+- (0.3) -> Node 4444
+- (0.3) -> Node 5555; Next hop -> Node 3333
+- (0.5) -> Node 6666; Next hop -> Node 3333
+[1701906192.019215] Node 2222 Routing Table
+- (0.2) -> Node 1111
+- (0.2) -> Node 3333
+- (0.3) -> Node 4444
+- (0.3) -> Node 5555; Next hop -> Node 3333
+- (0.5) -> Node 6666; Next hop -> Node 3333
+[1701906192.0192409] Node 2222 Routing Table
+- (0.2) -> Node 1111
+- (0.2) -> Node 3333
+- (0.3) -> Node 4444
+- (0.3) -> Node 5555; Next hop -> Node 3333
+- (0.5) -> Node 6666; Next hop -> Node 3333
+[1701906192.0192618] Node 2222 Routing Table
+- (0.2) -> Node 1111
+- (0.2) -> Node 3333
+- (0.3) -> Node 4444
+- (0.3) -> Node 5555; Next hop -> Node 3333
+- (0.5) -> Node 6666; Next hop -> Node 3333
+[1701906192.0198112] Node 2222 Routing Table
+- (0.2) -> Node 1111
+- (0.2) -> Node 3333
+- (0.3) -> Node 4444
+- (0.3) -> Node 5555; Next hop -> Node 3333
+- (0.5) -> Node 6666; Next hop -> Node 3333
+[1701906195.381508] Node 2222 Routing Table
+- (0.2) -> Node 1111
+- (0.2) -> Node 3333
+- (0.3) -> Node 4444
+- (0.3) -> Node 5555; Next hop -> Node 3333
+- (0.5) -> Node 6666; Next hop -> Node 3333
+[1701906195.939379] Message sent from Node 2222 to Node 1111
+[1701906195.940205] Message sent from Node 2222 to Node 3333
+[1701906195.940584] Message sent from Node 2222 to Node 4444
+[1701906196.484344] Node 2222 Routing Table
+- (0.2) -> Node 1111
+- (0.2) -> Node 3333
+- (0.3) -> Node 4444
+- (0.3) -> Node 5555; Next hop -> Node 3333
+- (0.5) -> Node 6666; Next hop -> Node 3333
+[1701906197.021929] Node 2222 Routing Table
+- (0.2) -> Node 1111
+- (0.2) -> Node 3333
+- (0.3) -> Node 4444
+- (0.3) -> Node 5555; Next hop -> Node 3333
+- (0.5) -> Node 6666; Next hop -> Node 3333
+[1701906200.387959] Node 2222 Routing Table
+- (0.2) -> Node 1111
+- (0.2) -> Node 3333
+- (0.3) -> Node 4444
+- (0.3) -> Node 5555; Next hop -> Node 3333
+- (0.5) -> Node 6666; Next hop -> Node 3333
+[1701906200.946143] Message sent from Node 2222 to Node 1111
+[1701906200.946856] Message sent from Node 2222 to Node 3333
+[1701906200.947222] Message sent from Node 2222 to Node 4444
+[1701906201.490089] Node 2222 Routing Table
+- (0.2) -> Node 1111
+- (0.2) -> Node 3333
+- (0.3) -> Node 4444
+- (0.3) -> Node 5555; Next hop -> Node 3333
+- (0.5) -> Node 6666; Next hop -> Node 3333
+[1701906205.952676] Node 2222 Routing Table
+- (0.2) -> Node 1111
+- (0.2) -> Node 3333
+- (0.3) -> Node 4444
+- (0.3) -> Node 5555; Next hop -> Node 3333
+- (0.5) -> Node 6666; Next hop -> Node 3333
+
+Node 3333:
+[1701906192.01607] Message sent from Node 3333 to Node 1111
+[1701906192.0168982] Message sent from Node 3333 to Node 2222
+[1701906192.0170949] Message sent from Node 3333 to Node 4444
+[1701906192.017359] Message sent from Node 3333 to Node 5555
+[1701906192.017602] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.3) -> Node 4444
+- (0.1) -> Node 5555
+- (0.8) -> Node 6666; Next hop -> Node 4444
+[1701906192.017654] Message sent from Node 3333 to Node 1111
+[1701906192.01788] Message sent from Node 3333 to Node 2222
+[1701906192.0181582] Message sent from Node 3333 to Node 4444
+[1701906192.018445] Message sent from Node 3333 to Node 5555
+[1701906192.018927] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.2) -> Node 4444; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+[1701906192.0189729] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.2) -> Node 4444; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+[1701906192.018997] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.2) -> Node 4444; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+[1701906192.019022] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.2) -> Node 4444; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+[1701906192.0190458] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.2) -> Node 4444; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+[1701906192.019072] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.2) -> Node 4444; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+[1701906192.019094] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.2) -> Node 4444; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+[1701906192.019116] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.2) -> Node 4444; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+[1701906192.0192041] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.2) -> Node 4444; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+[1701906192.0194461] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.2) -> Node 4444; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+[1701906192.0199108] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.2) -> Node 4444; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+[1701906192.569509] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.2) -> Node 4444; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+[1701906195.3818] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.2) -> Node 4444; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+[1701906195.940842] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.2) -> Node 4444; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+[1701906196.4834921] Message sent from Node 3333 to Node 1111
+[1701906196.484023] Message sent from Node 3333 to Node 2222
+[1701906196.4842482] Message sent from Node 3333 to Node 4444
+[1701906196.484423] Message sent from Node 3333 to Node 5555
+[1701906197.022096] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.2) -> Node 4444; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+[1701906197.5713742] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.2) -> Node 4444; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+[1701906200.388278] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.2) -> Node 4444; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+[1701906200.947412] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.2) -> Node 4444; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+[1701906201.489266] Message sent from Node 3333 to Node 1111
+[1701906201.489772] Message sent from Node 3333 to Node 2222
+[1701906201.48999] Message sent from Node 3333 to Node 4444
+[1701906201.4901912] Message sent from Node 3333 to Node 5555
+[1701906206.4929101] Node 3333 Routing Table
+- (0.1) -> Node 1111
+- (0.2) -> Node 2222
+- (0.2) -> Node 4444; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+
+Node 4444:
+[1701906188.712229] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.3) -> Node 3333
+- (0.1) -> Node 5555
+- (0.5) -> Node 6666
+[1701906192.014339] Message sent from Node 4444 to Node 2222
+[1701906192.015713] Message sent from Node 4444 to Node 3333
+[1701906192.01595] Message sent from Node 4444 to Node 5555
+[1701906192.0161679] Message sent from Node 4444 to Node 6666
+[1701906192.016916] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.3) -> Node 3333
+- (0.1) -> Node 5555
+- (0.5) -> Node 6666
+[1701906192.017399] Message sent from Node 4444 to Node 2222
+[1701906192.017592] Message sent from Node 4444 to Node 3333
+[1701906192.0178611] Message sent from Node 4444 to Node 5555
+[1701906192.018135] Message sent from Node 4444 to Node 6666
+[1701906192.0184371] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.3) -> Node 3333
+- (0.1) -> Node 5555
+- (0.5) -> Node 6666
+- (0.5) -> Node 1111; Next hop -> Node 2222
+[1701906192.018497] Message sent from Node 4444 to Node 2222
+[1701906192.01891] Message sent from Node 4444 to Node 3333
+[1701906192.019166] Message sent from Node 4444 to Node 5555
+[1701906192.019388] Message sent from Node 4444 to Node 6666
+[1701906192.01959] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.2) -> Node 3333; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+- (0.5) -> Node 1111; Next hop -> Node 2222
+[1701906192.019647] Message sent from Node 4444 to Node 2222
+[1701906192.019766] Message sent from Node 4444 to Node 3333
+[1701906192.019874] Message sent from Node 4444 to Node 5555
+[1701906192.019978] Message sent from Node 4444 to Node 6666
+[1701906192.0200791] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.2) -> Node 3333; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+- (0.3) -> Node 1111; Next hop -> Node 3333
+[1701906192.020113] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.2) -> Node 3333; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+- (0.3) -> Node 1111; Next hop -> Node 3333
+[1701906192.020135] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.2) -> Node 3333; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+- (0.3) -> Node 1111; Next hop -> Node 3333
+[1701906192.020156] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.2) -> Node 3333; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+- (0.3) -> Node 1111; Next hop -> Node 3333
+[1701906192.0201752] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.2) -> Node 3333; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+- (0.3) -> Node 1111; Next hop -> Node 3333
+[1701906192.020459] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.2) -> Node 3333; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+- (0.3) -> Node 1111; Next hop -> Node 3333
+[1701906192.020489] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.2) -> Node 3333; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+- (0.3) -> Node 1111; Next hop -> Node 3333
+[1701906192.020513] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.2) -> Node 3333; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+- (0.3) -> Node 1111; Next hop -> Node 3333
+[1701906192.5696929] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.2) -> Node 3333; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+- (0.3) -> Node 1111; Next hop -> Node 3333
+[1701906193.714421] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.2) -> Node 3333; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+- (0.3) -> Node 1111; Next hop -> Node 3333
+[1701906195.941171] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.2) -> Node 3333; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+- (0.3) -> Node 1111; Next hop -> Node 3333
+[1701906196.484504] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.2) -> Node 3333; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+- (0.3) -> Node 1111; Next hop -> Node 3333
+[1701906197.021533] Message sent from Node 4444 to Node 2222
+[1701906197.021846] Message sent from Node 4444 to Node 3333
+[1701906197.022012] Message sent from Node 4444 to Node 5555
+[1701906197.02218] Message sent from Node 4444 to Node 6666
+[1701906197.571579] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.2) -> Node 3333; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+- (0.3) -> Node 1111; Next hop -> Node 3333
+[1701906198.720302] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.2) -> Node 3333; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+- (0.3) -> Node 1111; Next hop -> Node 3333
+[1701906200.947805] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.2) -> Node 3333; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+- (0.3) -> Node 1111; Next hop -> Node 3333
+[1701906201.490282] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.2) -> Node 3333; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+- (0.3) -> Node 1111; Next hop -> Node 3333
+[1701906202.025402] Node 4444 Routing Table
+- (0.3) -> Node 2222
+- (0.2) -> Node 3333; Next hop -> Node 5555
+- (0.1) -> Node 5555
+- (0.3) -> Node 6666; Next hop -> Node 5555
+- (0.3) -> Node 1111; Next hop -> Node 3333
+
+Node 5555:
+[1701906188.7123892] Node 5555 Routing Table
+- (0.1) -> Node 3333
+- (0.1) -> Node 4444
+- (0.2) -> Node 6666
+[1701906192.016268] Message sent from Node 5555 to Node 3333
+[1701906192.017038] Message sent from Node 5555 to Node 4444
+[1701906192.017357] Message sent from Node 5555 to Node 6666
+[1701906192.0176158] Node 5555 Routing Table
+- (0.1) -> Node 3333
+- (0.1) -> Node 4444
+- (0.2) -> Node 6666
+- (0.4) -> Node 2222; Next hop -> Node 4444
+[1701906192.017659] Node 5555 Routing Table
+- (0.1) -> Node 3333
+- (0.1) -> Node 4444
+- (0.2) -> Node 6666
+- (0.4) -> Node 2222; Next hop -> Node 4444
+[1701906192.017697] Message sent from Node 5555 to Node 3333
+[1701906192.017907] Message sent from Node 5555 to Node 4444
+[1701906192.0181649] Message sent from Node 5555 to Node 6666
+[1701906192.018451] Node 5555 Routing Table
+- (0.1) -> Node 3333
+- (0.1) -> Node 4444
+- (0.2) -> Node 6666
+- (0.3) -> Node 2222; Next hop -> Node 3333
+- (0.2) -> Node 1111; Next hop -> Node 3333
+[1701906192.018482] Node 5555 Routing Table
+- (0.1) -> Node 3333
+- (0.1) -> Node 4444
+- (0.2) -> Node 6666
+- (0.3) -> Node 2222; Next hop -> Node 3333
+- (0.2) -> Node 1111; Next hop -> Node 3333
+[1701906192.0185091] Node 5555 Routing Table
+- (0.1) -> Node 3333
+- (0.1) -> Node 4444
+- (0.2) -> Node 6666
+- (0.3) -> Node 2222; Next hop -> Node 3333
+- (0.2) -> Node 1111; Next hop -> Node 3333
+[1701906192.018976] Node 5555 Routing Table
+- (0.1) -> Node 3333
+- (0.1) -> Node 4444
+- (0.2) -> Node 6666
+- (0.3) -> Node 2222; Next hop -> Node 3333
+- (0.2) -> Node 1111; Next hop -> Node 3333
+[1701906192.019215] Node 5555 Routing Table
+- (0.1) -> Node 3333
+- (0.1) -> Node 4444
+- (0.2) -> Node 6666
+- (0.3) -> Node 2222; Next hop -> Node 3333
+- (0.2) -> Node 1111; Next hop -> Node 3333
+[1701906192.019427] Node 5555 Routing Table
+- (0.1) -> Node 3333
+- (0.1) -> Node 4444
+- (0.2) -> Node 6666
+- (0.3) -> Node 2222; Next hop -> Node 3333
+- (0.2) -> Node 1111; Next hop -> Node 3333
+[1701906192.019638] Node 5555 Routing Table
+- (0.1) -> Node 3333
+- (0.1) -> Node 4444
+- (0.2) -> Node 6666
+- (0.3) -> Node 2222; Next hop -> Node 3333
+- (0.2) -> Node 1111; Next hop -> Node 3333
+[1701906192.020025] Node 5555 Routing Table
+- (0.1) -> Node 3333
+- (0.1) -> Node 4444
+- (0.2) -> Node 6666
+- (0.3) -> Node 2222; Next hop -> Node 3333
+- (0.2) -> Node 1111; Next hop -> Node 3333
+[1701906192.568908] Message sent from Node 5555 to Node 3333
+[1701906192.56939] Message sent from Node 5555 to Node 4444
+[1701906192.5696042] Message sent from Node 5555 to Node 6666
+[1701906193.714637] Node 5555 Routing Table
+- (0.1) -> Node 3333
+- (0.1) -> Node 4444
+- (0.2) -> Node 6666
+- (0.3) -> Node 2222; Next hop -> Node 3333
+- (0.2) -> Node 1111; Next hop -> Node 3333
+[1701906196.484716] Node 5555 Routing Table
+- (0.1) -> Node 3333
+- (0.1) -> Node 4444
+- (0.2) -> Node 6666
+- (0.3) -> Node 2222; Next hop -> Node 3333
+- (0.2) -> Node 1111; Next hop -> Node 3333
+[1701906197.022249] Node 5555 Routing Table
+- (0.1) -> Node 3333
+- (0.1) -> Node 4444
+- (0.2) -> Node 6666
+- (0.3) -> Node 2222; Next hop -> Node 3333
+- (0.2) -> Node 1111; Next hop -> Node 3333
+[1701906197.570836] Message sent from Node 5555 to Node 3333
+[1701906197.571282] Message sent from Node 5555 to Node 4444
+[1701906197.5715] Message sent from Node 5555 to Node 6666
+[1701906198.720535] Node 5555 Routing Table
+- (0.1) -> Node 3333
+- (0.1) -> Node 4444
+- (0.2) -> Node 6666
+- (0.3) -> Node 2222; Next hop -> Node 3333
+- (0.2) -> Node 1111; Next hop -> Node 3333
+[1701906201.490392] Node 5555 Routing Table
+- (0.1) -> Node 3333
+- (0.1) -> Node 4444
+- (0.2) -> Node 6666
+- (0.3) -> Node 2222; Next hop -> Node 3333
+- (0.2) -> Node 1111; Next hop -> Node 3333
+[1701906202.5741482] Node 5555 Routing Table
+- (0.1) -> Node 3333
+- (0.1) -> Node 4444
+- (0.2) -> Node 6666
+- (0.3) -> Node 2222; Next hop -> Node 3333
+- (0.2) -> Node 1111; Next hop -> Node 3333
+
+Node 6666:
+[1701906188.7108219] Message sent from Node 6666 to Node 4444
+[1701906188.712129] Message sent from Node 6666 to Node 5555
+[1701906192.016598] Message sent from Node 6666 to Node 4444
+[1701906192.0168371] Message sent from Node 6666 to Node 5555
+[1701906192.017067] Node 6666 Routing Table
+- (0.5) -> Node 4444
+- (0.2) -> Node 5555
+- (0.8) -> Node 2222; Next hop -> Node 4444
+- (0.8) -> Node 3333; Next hop -> Node 4444
+[1701906192.01767] Message sent from Node 6666 to Node 4444
+[1701906192.017859] Message sent from Node 6666 to Node 5555
+[1701906192.018136] Node 6666 Routing Table
+- (0.3) -> Node 4444; Next hop -> Node 5555
+- (0.2) -> Node 5555
+- (0.6) -> Node 2222; Next hop -> Node 5555
+- (0.3) -> Node 3333; Next hop -> Node 5555
+[1701906192.018518] Message sent from Node 6666 to Node 4444
+[1701906192.01891] Message sent from Node 6666 to Node 5555
+[1701906192.0191622] Node 6666 Routing Table
+- (0.3) -> Node 4444; Next hop -> Node 5555
+- (0.2) -> Node 5555
+- (0.6) -> Node 2222; Next hop -> Node 5555
+- (0.3) -> Node 3333; Next hop -> Node 5555
+- (1.0) -> Node 1111; Next hop -> Node 4444
+[1701906192.0192158] Message sent from Node 6666 to Node 4444
+[1701906192.019379] Message sent from Node 6666 to Node 5555
+[1701906192.019587] Node 6666 Routing Table
+- (0.3) -> Node 4444; Next hop -> Node 5555
+- (0.2) -> Node 5555
+- (0.5) -> Node 2222; Next hop -> Node 5555
+- (0.3) -> Node 3333; Next hop -> Node 5555
+- (0.4) -> Node 1111; Next hop -> Node 5555
+[1701906192.019627] Node 6666 Routing Table
+- (0.3) -> Node 4444; Next hop -> Node 5555
+- (0.2) -> Node 5555
+- (0.5) -> Node 2222; Next hop -> Node 5555
+- (0.3) -> Node 3333; Next hop -> Node 5555
+- (0.4) -> Node 1111; Next hop -> Node 5555
+[1701906192.020111] Node 6666 Routing Table
+- (0.3) -> Node 4444; Next hop -> Node 5555
+- (0.2) -> Node 5555
+- (0.5) -> Node 2222; Next hop -> Node 5555
+- (0.3) -> Node 3333; Next hop -> Node 5555
+- (0.4) -> Node 1111; Next hop -> Node 5555
+[1701906192.569866] Node 6666 Routing Table
+- (0.3) -> Node 4444; Next hop -> Node 5555
+- (0.2) -> Node 5555
+- (0.5) -> Node 2222; Next hop -> Node 5555
+- (0.3) -> Node 3333; Next hop -> Node 5555
+- (0.4) -> Node 1111; Next hop -> Node 5555
+[1701906193.71379] Message sent from Node 6666 to Node 4444
+[1701906193.7142882] Message sent from Node 6666 to Node 5555
+[1701906197.02241] Node 6666 Routing Table
+- (0.3) -> Node 4444; Next hop -> Node 5555
+- (0.2) -> Node 5555
+- (0.5) -> Node 2222; Next hop -> Node 5555
+- (0.3) -> Node 3333; Next hop -> Node 5555
+- (0.4) -> Node 1111; Next hop -> Node 5555
+[1701906197.5717618] Node 6666 Routing Table
+- (0.3) -> Node 4444; Next hop -> Node 5555
+- (0.2) -> Node 5555
+- (0.5) -> Node 2222; Next hop -> Node 5555
+- (0.3) -> Node 3333; Next hop -> Node 5555
+- (0.4) -> Node 1111; Next hop -> Node 5555
+[1701906198.7196732] Message sent from Node 6666 to Node 4444
+[1701906198.720172] Message sent from Node 6666 to Node 5555
+[1701906203.720814] Node 6666 Routing Table
+- (0.3) -> Node 4444; Next hop -> Node 5555
+- (0.2) -> Node 5555
+- (0.5) -> Node 2222; Next hop -> Node 5555
+- (0.3) -> Node 3333; Next hop -> Node 5555
+- (0.4) -> Node 1111; Next hop -> Node 5555
+
+
+Commands: (A circle and all edges are of the same cost.)
+python dvnode.py 1111 2222 0.3 5555 0.3
+python dvnode.py 2222 3333 0.3 1111 0.3
+python dvnode.py 3333 4444 0.3 2222 0.3
+python dvnode.py 4444 5555 0.3 3333 0.3
+python dvnode.py 5555 1111 0.3 4444 0.3 last
+
+Results:
+Node 1111:
+[1701906648.521159] Message sent from Node 1111 to Node 2222
+[1701906648.52208] Message sent from Node 1111 to Node 5555
+[1701906648.522314] Node 1111 Routing Table
+- (0.3) -> Node 2222
+- (0.3) -> Node 5555
+- (0.6) -> Node 4444; Next hop -> Node 5555
+[1701906648.522369] Message sent from Node 1111 to Node 2222
+[1701906648.522559] Message sent from Node 1111 to Node 5555
+[1701906648.52272] Node 1111 Routing Table
+- (0.3) -> Node 2222
+- (0.3) -> Node 5555
+- (0.6) -> Node 4444; Next hop -> Node 5555
+- (0.9) -> Node 3333; Next hop -> Node 5555
+[1701906648.5227609] Node 1111 Routing Table
+- (0.3) -> Node 2222
+- (0.3) -> Node 5555
+- (0.6) -> Node 4444; Next hop -> Node 5555
+- (0.9) -> Node 3333; Next hop -> Node 5555
+[1701906648.5230541] Message sent from Node 1111 to Node 2222
+[1701906648.523184] Message sent from Node 1111 to Node 5555
+[1701906648.523349] Node 1111 Routing Table
+- (0.3) -> Node 2222
+- (0.3) -> Node 5555
+- (0.6) -> Node 4444; Next hop -> Node 5555
+- (0.6) -> Node 3333; Next hop -> Node 2222
+[1701906648.5237818] Node 1111 Routing Table
+- (0.3) -> Node 2222
+- (0.3) -> Node 5555
+- (0.6) -> Node 4444; Next hop -> Node 5555
+- (0.6) -> Node 3333; Next hop -> Node 2222
+[1701906650.7628071] Message sent from Node 1111 to Node 2222
+[1701906650.7632918] Message sent from Node 1111 to Node 5555
+[1701906651.444622] Node 1111 Routing Table
+- (0.3) -> Node 2222
+- (0.3) -> Node 5555
+- (0.6) -> Node 4444; Next hop -> Node 5555
+- (0.6) -> Node 3333; Next hop -> Node 2222
+[1701906653.5276859] Node 1111 Routing Table
+- (0.3) -> Node 2222
+- (0.3) -> Node 5555
+- (0.6) -> Node 4444; Next hop -> Node 5555
+- (0.6) -> Node 3333; Next hop -> Node 2222
+[1701906655.766282] Message sent from Node 1111 to Node 2222
+[1701906655.766728] Message sent from Node 1111 to Node 5555
+[1701906656.450229] Node 1111 Routing Table
+- (0.3) -> Node 2222
+- (0.3) -> Node 5555
+- (0.6) -> Node 4444; Next hop -> Node 5555
+- (0.6) -> Node 3333; Next hop -> Node 2222
+[1701906658.534085] Node 1111 Routing Table
+- (0.3) -> Node 2222
+- (0.3) -> Node 5555
+- (0.6) -> Node 4444; Next hop -> Node 5555
+- (0.6) -> Node 3333; Next hop -> Node 2222
+[1701906660.7715] Node 1111 Routing Table
+- (0.3) -> Node 2222
+- (0.3) -> Node 5555
+- (0.6) -> Node 4444; Next hop -> Node 5555
+- (0.6) -> Node 3333; Next hop -> Node 2222
+
+Node 2222:
+[1701906648.522202] Message sent from Node 2222 to Node 3333
+[1701906648.522859] Message sent from Node 2222 to Node 1111
+[1701906648.5230038] Node 2222 Routing Table
+- (0.3) -> Node 3333
+- (0.3) -> Node 1111
+- (0.6) -> Node 5555; Next hop -> Node 1111
+- (0.9) -> Node 4444; Next hop -> Node 1111
+[1701906648.52305] Node 2222 Routing Table
+- (0.3) -> Node 3333
+- (0.3) -> Node 1111
+- (0.6) -> Node 5555; Next hop -> Node 1111
+- (0.9) -> Node 4444; Next hop -> Node 1111
+[1701906648.523224] Node 2222 Routing Table
+- (0.3) -> Node 3333
+- (0.3) -> Node 1111
+- (0.6) -> Node 5555; Next hop -> Node 1111
+- (0.9) -> Node 4444; Next hop -> Node 1111
+[1701906648.523403] Message sent from Node 2222 to Node 3333
+[1701906648.5235672] Message sent from Node 2222 to Node 1111
+[1701906648.523725] Node 2222 Routing Table
+- (0.3) -> Node 3333
+- (0.3) -> Node 1111
+- (0.6) -> Node 5555; Next hop -> Node 1111
+- (0.6) -> Node 4444; Next hop -> Node 3333
+[1701906648.523755] Node 2222 Routing Table
+- (0.3) -> Node 3333
+- (0.3) -> Node 1111
+- (0.6) -> Node 5555; Next hop -> Node 1111
+- (0.6) -> Node 4444; Next hop -> Node 3333
+[1701906650.763402] Node 2222 Routing Table
+- (0.3) -> Node 3333
+- (0.3) -> Node 1111
+- (0.6) -> Node 5555; Next hop -> Node 1111
+- (0.6) -> Node 4444; Next hop -> Node 3333
+[1701906651.443452] Message sent from Node 2222 to Node 3333
+[1701906651.4441888] Message sent from Node 2222 to Node 1111
+[1701906652.189759] Node 2222 Routing Table
+- (0.3) -> Node 3333
+- (0.3) -> Node 1111
+- (0.6) -> Node 5555; Next hop -> Node 1111
+- (0.6) -> Node 4444; Next hop -> Node 3333
+[1701906655.766816] Node 2222 Routing Table
+- (0.3) -> Node 3333
+- (0.3) -> Node 1111
+- (0.6) -> Node 5555; Next hop -> Node 1111
+- (0.6) -> Node 4444; Next hop -> Node 3333
+[1701906656.4489422] Message sent from Node 2222 to Node 3333
+[1701906656.44981] Message sent from Node 2222 to Node 1111
+[1701906657.1920881] Node 2222 Routing Table
+- (0.3) -> Node 3333
+- (0.3) -> Node 1111
+- (0.6) -> Node 5555; Next hop -> Node 1111
+- (0.6) -> Node 4444; Next hop -> Node 3333
+[1701906661.455204] Node 2222 Routing Table
+- (0.3) -> Node 3333
+- (0.3) -> Node 1111
+- (0.6) -> Node 5555; Next hop -> Node 1111
+- (0.6) -> Node 4444; Next hop -> Node 3333
+
+Node 3333:
+[1701906648.5224488] Message sent from Node 3333 to Node 4444
+[1701906648.523183] Message sent from Node 3333 to Node 2222
+[1701906648.523363] Node 3333 Routing Table
+- (0.3) -> Node 4444
+- (0.3) -> Node 2222
+- (0.6) -> Node 5555; Next hop -> Node 4444
+- (0.9) -> Node 1111; Next hop -> Node 4444
+[1701906648.5234292] Message sent from Node 3333 to Node 4444
+[1701906648.5235672] Message sent from Node 3333 to Node 2222
+[1701906648.523726] Node 3333 Routing Table
+- (0.3) -> Node 4444
+- (0.3) -> Node 2222
+- (0.6) -> Node 5555; Next hop -> Node 4444
+- (0.6) -> Node 1111; Next hop -> Node 2222
+[1701906648.523763] Node 3333 Routing Table
+- (0.3) -> Node 4444
+- (0.3) -> Node 2222
+- (0.6) -> Node 5555; Next hop -> Node 4444
+- (0.6) -> Node 1111; Next hop -> Node 2222
+[1701906648.5237818] Node 3333 Routing Table
+- (0.3) -> Node 4444
+- (0.3) -> Node 2222
+- (0.6) -> Node 5555; Next hop -> Node 4444
+- (0.6) -> Node 1111; Next hop -> Node 2222
+[1701906648.523799] Node 3333 Routing Table
+- (0.3) -> Node 4444
+- (0.3) -> Node 2222
+- (0.6) -> Node 5555; Next hop -> Node 4444
+- (0.6) -> Node 1111; Next hop -> Node 2222
+[1701906651.444428] Node 3333 Routing Table
+- (0.3) -> Node 4444
+- (0.3) -> Node 2222
+- (0.6) -> Node 5555; Next hop -> Node 4444
+- (0.6) -> Node 1111; Next hop -> Node 2222
+[1701906652.188503] Message sent from Node 3333 to Node 4444
+[1701906652.189209] Message sent from Node 3333 to Node 2222
+[1701906652.857537] Node 3333 Routing Table
+- (0.3) -> Node 4444
+- (0.3) -> Node 2222
+- (0.6) -> Node 5555; Next hop -> Node 4444
+- (0.6) -> Node 1111; Next hop -> Node 2222
+[1701906656.450046] Node 3333 Routing Table
+- (0.3) -> Node 4444
+- (0.3) -> Node 2222
+- (0.6) -> Node 5555; Next hop -> Node 4444
+- (0.6) -> Node 1111; Next hop -> Node 2222
+[1701906657.191365] Message sent from Node 3333 to Node 4444
+[1701906657.191775] Message sent from Node 3333 to Node 2222
+[1701906657.86296] Node 3333 Routing Table
+- (0.3) -> Node 4444
+- (0.3) -> Node 2222
+- (0.6) -> Node 5555; Next hop -> Node 4444
+- (0.6) -> Node 1111; Next hop -> Node 2222
+[1701906662.195473] Node 3333 Routing Table
+- (0.3) -> Node 4444
+- (0.3) -> Node 2222
+- (0.6) -> Node 5555; Next hop -> Node 4444
+- (0.6) -> Node 1111; Next hop -> Node 2222
+
+Node 4444:
+[1701906648.521206] Message sent from Node 4444 to Node 5555
+[1701906648.52211] Message sent from Node 4444 to Node 3333
+[1701906648.522351] Node 4444 Routing Table
+- (0.3) -> Node 5555
+- (0.3) -> Node 3333
+- (0.6) -> Node 1111; Next hop -> Node 5555
+[1701906648.522571] Node 4444 Routing Table
+- (0.3) -> Node 5555
+- (0.3) -> Node 3333
+- (0.6) -> Node 1111; Next hop -> Node 5555
+[1701906648.522893] Message sent from Node 4444 to Node 5555
+[1701906648.5230021] Message sent from Node 4444 to Node 3333
+[1701906648.523115] Node 4444 Routing Table
+- (0.3) -> Node 5555
+- (0.3) -> Node 3333
+- (0.6) -> Node 1111; Next hop -> Node 5555
+- (0.9) -> Node 2222; Next hop -> Node 5555
+[1701906648.523226] Message sent from Node 4444 to Node 5555
+[1701906648.5233579] Message sent from Node 4444 to Node 3333
+[1701906648.523465] Node 4444 Routing Table
+- (0.3) -> Node 5555
+- (0.3) -> Node 3333
+- (0.6) -> Node 1111; Next hop -> Node 5555
+- (0.6) -> Node 2222; Next hop -> Node 3333
+[1701906648.523613] Node 4444 Routing Table
+- (0.3) -> Node 5555
+- (0.3) -> Node 3333
+- (0.6) -> Node 1111; Next hop -> Node 5555
+- (0.6) -> Node 2222; Next hop -> Node 3333
+[1701906652.189458] Node 4444 Routing Table
+- (0.3) -> Node 5555
+- (0.3) -> Node 3333
+- (0.6) -> Node 1111; Next hop -> Node 5555
+- (0.6) -> Node 2222; Next hop -> Node 3333
+[1701906652.856332] Message sent from Node 4444 to Node 5555
+[1701906652.8570921] Message sent from Node 4444 to Node 3333
+[1701906653.528076] Node 4444 Routing Table
+- (0.3) -> Node 5555
+- (0.3) -> Node 3333
+- (0.6) -> Node 1111; Next hop -> Node 5555
+- (0.6) -> Node 2222; Next hop -> Node 3333
+[1701906657.191881] Node 4444 Routing Table
+- (0.3) -> Node 5555
+- (0.3) -> Node 3333
+- (0.6) -> Node 1111; Next hop -> Node 5555
+- (0.6) -> Node 2222; Next hop -> Node 3333
+[1701906657.8624399] Message sent from Node 4444 to Node 5555
+[1701906657.862734] Message sent from Node 4444 to Node 3333
+[1701906658.534341] Node 4444 Routing Table
+- (0.3) -> Node 5555
+- (0.3) -> Node 3333
+- (0.6) -> Node 1111; Next hop -> Node 5555
+- (0.6) -> Node 2222; Next hop -> Node 3333
+[1701906662.865725] Node 4444 Routing Table
+- (0.3) -> Node 5555
+- (0.3) -> Node 3333
+- (0.6) -> Node 1111; Next hop -> Node 5555
+- (0.6) -> Node 2222; Next hop -> Node 3333
+
+Node 5555:
+[1701906648.5198221] Message sent from Node 5555 to Node 1111
+[1701906648.520916] Message sent from Node 5555 to Node 4444
+[1701906648.5221581] Message sent from Node 5555 to Node 1111
+[1701906648.522312] Message sent from Node 5555 to Node 4444
+[1701906648.522531] Node 5555 Routing Table
+- (0.3) -> Node 1111
+- (0.3) -> Node 4444
+- (0.6) -> Node 3333; Next hop -> Node 4444
+[1701906648.5225751] Message sent from Node 5555 to Node 1111
+[1701906648.522706] Message sent from Node 5555 to Node 4444
+[1701906648.52285] Node 5555 Routing Table
+- (0.3) -> Node 1111
+- (0.3) -> Node 4444
+- (0.6) -> Node 3333; Next hop -> Node 4444
+- (0.6) -> Node 2222; Next hop -> Node 1111
+[1701906648.522882] Node 5555 Routing Table
+- (0.3) -> Node 1111
+- (0.3) -> Node 4444
+- (0.6) -> Node 3333; Next hop -> Node 4444
+- (0.6) -> Node 2222; Next hop -> Node 1111
+[1701906648.5230432] Node 5555 Routing Table
+- (0.3) -> Node 1111
+- (0.3) -> Node 4444
+- (0.6) -> Node 3333; Next hop -> Node 4444
+- (0.6) -> Node 2222; Next hop -> Node 1111
+[1701906648.523381] Node 5555 Routing Table
+- (0.3) -> Node 1111
+- (0.3) -> Node 4444
+- (0.6) -> Node 3333; Next hop -> Node 4444
+- (0.6) -> Node 2222; Next hop -> Node 1111
+[1701906648.523401] Node 5555 Routing Table
+- (0.3) -> Node 1111
+- (0.3) -> Node 4444
+- (0.6) -> Node 3333; Next hop -> Node 4444
+- (0.6) -> Node 2222; Next hop -> Node 1111
+[1701906650.763579] Node 5555 Routing Table
+- (0.3) -> Node 1111
+- (0.3) -> Node 4444
+- (0.6) -> Node 3333; Next hop -> Node 4444
+- (0.6) -> Node 2222; Next hop -> Node 1111
+[1701906652.857524] Node 5555 Routing Table
+- (0.3) -> Node 1111
+- (0.3) -> Node 4444
+- (0.6) -> Node 3333; Next hop -> Node 4444
+- (0.6) -> Node 2222; Next hop -> Node 1111
+[1701906653.526305] Message sent from Node 5555 to Node 1111
+[1701906653.527355] Message sent from Node 5555 to Node 4444
+[1701906655.766997] Node 5555 Routing Table
+- (0.3) -> Node 1111
+- (0.3) -> Node 4444
+- (0.6) -> Node 3333; Next hop -> Node 4444
+- (0.6) -> Node 2222; Next hop -> Node 1111
+[1701906657.862818] Node 5555 Routing Table
+- (0.3) -> Node 1111
+- (0.3) -> Node 4444
+- (0.6) -> Node 3333; Next hop -> Node 4444
+- (0.6) -> Node 2222; Next hop -> Node 1111
+[1701906658.533001] Message sent from Node 5555 to Node 1111
+[1701906658.5337589] Message sent from Node 5555 to Node 4444
+[1701906663.5385442] Node 5555 Routing Table
+- (0.3) -> Node 1111
+- (0.3) -> Node 4444
+- (0.6) -> Node 3333; Next hop -> Node 4444
+- (0.6) -> Node 2222; Next hop -> Node 1111
+
+
+cnnode.py:
+
+Commands:
+python cnnode.py 1111 receive send 2222 3333
+python cnnode.py 2222 receive 1111 0.1 send 3333 4444
+python cnnode.py 3333 receive 1111 0.5 2222 0.2 send 4444
+python cnnode.py 4444 receive 2222 0.8 3333 0.5 send last
+
+Results:
+Node 1111:
+[1701908519.9134989] Display Routing Table:
+- (inf) -> Node 2222; Next hop -> Node None
+- (inf) -> Node 3333; Next hop -> Node None
+[1701908525.93796] Link to 2222: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908525.93796] Link to 3333: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908526.943342] Link to 2222: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908526.943342] Link to 3333: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908527.944522] Link to 2222: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908527.944522] Link to 3333: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908528.945291] Link to 2222: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908528.945291] Link to 3333: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908529.949232] Link to 2222: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908529.949232] Link to 3333: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908530.9535391] Link to 2222: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908530.9535391] Link to 3333: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908531.955212] Link to 2222: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908531.955212] Link to 3333: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908532.958853] Link to 2222: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908532.958853] Link to 3333: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908533.963465] Link to 2222: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908533.963465] Link to 3333: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908534.964213] Link to 2222: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908534.964213] Link to 3333: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908535.969244] Link to 2222: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908535.969244] Link to 3333: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908536.971361] Link to 2222: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908536.971361] Link to 3333: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908537.975338] Link to 2222: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908537.975338] Link to 3333: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908538.980546] Display Routing Table:
+- (0.09) -> Node 2222; Next hop -> Node 2222
+- (0.17) -> Node 3333; Next hop -> Node 2222
+- (0.61) -> Node 4444; Next hop -> Node 2222
+
+Node 2222:
+[1701908519.9117398] Display Routing Table:
+- (inf) -> Node 1111; Next hop -> Node None
+- (inf) -> Node 3333; Next hop -> Node None
+- (inf) -> Node 4444; Next hop -> Node None
+[1701908525.9373372] Link to 1111: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908525.9373372] Link to 3333: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908526.94176] Link to 1111: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908526.94176] Link to 3333: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908527.944515] Link to 1111: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908527.944515] Link to 3333: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908528.947542] Link to 1111: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908528.947542] Link to 3333: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908529.951643] Link to 1111: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908529.951643] Link to 3333: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908529.951643] Link to 4444: 96 packets sent, 77 packets lost, loss rate 0.8020833333333334
+[1701908530.953557] Link to 1111: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908530.953557] Link to 3333: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908530.953557] Link to 4444: 104 packets sent, 81 packets lost, loss rate 0.7788461538461539
+[1701908531.956406] Link to 1111: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908531.956406] Link to 3333: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908531.956406] Link to 4444: 112 packets sent, 87 packets lost, loss rate 0.7767857142857143
+[1701908532.961459] Link to 1111: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908532.961459] Link to 3333: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908532.961459] Link to 4444: 120 packets sent, 94 packets lost, loss rate 0.7833333333333333
+[1701908533.966591] Link to 1111: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908533.966591] Link to 3333: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908533.966591] Link to 4444: 128 packets sent, 100 packets lost, loss rate 0.78125
+[1701908534.9714959] Link to 1111: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908534.9714959] Link to 3333: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908534.9714959] Link to 4444: 136 packets sent, 107 packets lost, loss rate 0.7867647058823529
+[1701908535.974926] Link to 1111: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908535.974926] Link to 3333: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908535.974926] Link to 4444: 144 packets sent, 114 packets lost, loss rate 0.7916666666666666
+[1701908536.976937] Link to 1111: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908536.976937] Link to 3333: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908536.976937] Link to 4444: 152 packets sent, 120 packets lost, loss rate 0.7894736842105263
+[1701908537.98092] Link to 1111: 11 packets sent, 1 packets lost, loss rate 0.09090909090909091
+[1701908537.98092] Link to 3333: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908537.98092] Link to 4444: 160 packets sent, 125 packets lost, loss rate 0.78125
+[1701908538.984855] Display Routing Table:
+- (0.09) -> Node 1111; Next hop -> Node 1111
+- (0.08) -> Node 3333; Next hop -> Node 3333
+- (0.52) -> Node 4444; Next hop -> Node 3333
+
+Node 3333:
+[1701908519.9117389] Display Routing Table:
+- (inf) -> Node 1111; Next hop -> Node None
+- (inf) -> Node 2222; Next hop -> Node None
+- (inf) -> Node 4444; Next hop -> Node None
+[1701908525.938168] Link to 4444: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908525.938168] Link to 2222: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908525.938168] Link to 1111: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908526.943417] Link to 4444: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908526.943417] Link to 2222: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908526.943417] Link to 1111: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908527.945523] Link to 4444: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908527.945523] Link to 2222: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908527.945523] Link to 1111: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908528.949228] Link to 4444: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908528.949228] Link to 2222: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908528.949228] Link to 1111: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908529.954355] Link to 4444: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908529.954355] Link to 2222: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908529.954355] Link to 1111: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908530.958251] Link to 4444: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908530.958251] Link to 2222: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908530.958251] Link to 1111: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908531.96341] Link to 4444: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908531.96341] Link to 2222: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908531.96341] Link to 1111: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908532.9684658] Link to 4444: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908532.9684658] Link to 2222: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908532.9684658] Link to 1111: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908533.9736161] Link to 4444: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908533.9736161] Link to 2222: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908533.9736161] Link to 1111: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908534.977684] Link to 4444: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908534.977684] Link to 2222: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908534.977684] Link to 1111: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908535.980514] Link to 4444: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908535.980514] Link to 2222: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908535.980514] Link to 1111: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908536.9810822] Link to 4444: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908536.9810822] Link to 2222: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908536.9810822] Link to 1111: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908537.9828758] Link to 4444: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908537.9828758] Link to 2222: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701908537.9828758] Link to 1111: 23 packets sent, 8 packets lost, loss rate 0.34782608695652173
+[1701908538.98519] Display Routing Table:
+- (0.17) -> Node 1111; Next hop -> Node 2222
+- (0.08) -> Node 2222; Next hop -> Node 2222
+- (0.43) -> Node 4444; Next hop -> Node 4444
+
+Node 4444:
+[1701908519.9134989] Display Routing Table:
+- (inf) -> Node 2222; Next hop -> Node None
+- (inf) -> Node 3333; Next hop -> Node None
+[1701908525.937338] Link to 3333: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908526.940511] Link to 3333: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908527.944512] Link to 3333: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908528.946186] Link to 3333: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908529.9498198] Link to 3333: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908529.9498198] Link to 2222: 96 packets sent, 77 packets lost, loss rate 0.8020833333333334
+[1701908530.951736] Link to 3333: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908530.951736] Link to 2222: 104 packets sent, 81 packets lost, loss rate 0.7788461538461539
+[1701908531.955791] Link to 3333: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908531.955791] Link to 2222: 112 packets sent, 87 packets lost, loss rate 0.7767857142857143
+[1701908532.958611] Link to 3333: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908532.958611] Link to 2222: 120 packets sent, 94 packets lost, loss rate 0.7833333333333333
+[1701908533.961499] Link to 3333: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908533.961499] Link to 2222: 128 packets sent, 100 packets lost, loss rate 0.78125
+[1701908534.9667048] Link to 3333: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908534.9667048] Link to 2222: 136 packets sent, 107 packets lost, loss rate 0.7867647058823529
+[1701908535.969242] Link to 3333: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908535.969242] Link to 2222: 144 packets sent, 114 packets lost, loss rate 0.7916666666666666
+[1701908536.971176] Link to 3333: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908536.971176] Link to 2222: 152 packets sent, 120 packets lost, loss rate 0.7894736842105263
+[1701908537.975338] Link to 3333: 30 packets sent, 13 packets lost, loss rate 0.43333333333333335
+[1701908537.975338] Link to 2222: 160 packets sent, 125 packets lost, loss rate 0.78125
+[1701908538.980546] Display Routing Table:
+- (0.52) -> Node 2222; Next hop -> Node 3333
+- (0.43) -> Node 3333; Next hop -> Node 3333
+- (0.61) -> Node 1111; Next hop -> Node 3333
+
+Commands:
+python cnnode.py 1111 receive send 2222 3333
+python cnnode.py 2222 receive 1111 0.2 send 3333 4444
+python cnnode.py 3333 receive 1111 0.1 2222 0.2 send 4444 5555
+python cnnode.py 4444 receive 2222 0.3 3333 0.3 send 5555 6666
+python cnnode.py 5555 receive 3333 0.1 4444 0.1 send 6666
+python cnnode.py 6666 receive 4444 0.5 5555 0.2 send last
+
+Results:
+Node 1111:
+[1701909176.9394162] Display Routing Table:
+- (inf) -> Node 2222; Next hop -> Node None
+- (inf) -> Node 3333; Next hop -> Node None
+[1701909182.954038] Link to 2222: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909182.954038] Link to 3333: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909183.9580858] Link to 2222: 18 packets sent, 7 packets lost, loss rate 0.3888888888888889
+[1701909183.9580858] Link to 3333: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909184.959084] Link to 2222: 20 packets sent, 7 packets lost, loss rate 0.35
+[1701909184.959084] Link to 3333: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909185.9631958] Link to 2222: 22 packets sent, 8 packets lost, loss rate 0.36363636363636365
+[1701909185.9631958] Link to 3333: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909186.965771] Link to 2222: 24 packets sent, 8 packets lost, loss rate 0.3333333333333333
+[1701909186.965771] Link to 3333: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909187.966658] Link to 2222: 26 packets sent, 9 packets lost, loss rate 0.34615384615384615
+[1701909187.966658] Link to 3333: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909188.970881] Link to 2222: 28 packets sent, 11 packets lost, loss rate 0.39285714285714285
+[1701909188.970881] Link to 3333: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909189.973352] Link to 2222: 30 packets sent, 11 packets lost, loss rate 0.36666666666666664
+[1701909189.973352] Link to 3333: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909190.974426] Link to 2222: 32 packets sent, 12 packets lost, loss rate 0.375
+[1701909190.974426] Link to 3333: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909191.977342] Link to 2222: 34 packets sent, 12 packets lost, loss rate 0.35294117647058826
+[1701909191.977342] Link to 3333: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909192.981508] Link to 2222: 36 packets sent, 12 packets lost, loss rate 0.3333333333333333
+[1701909192.981508] Link to 3333: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909193.983129] Link to 2222: 38 packets sent, 13 packets lost, loss rate 0.34210526315789475
+[1701909193.983129] Link to 3333: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909194.983385] Link to 2222: 40 packets sent, 13 packets lost, loss rate 0.325
+[1701909194.983385] Link to 3333: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909195.984475] Display Routing Table:
+- (0.31) -> Node 2222; Next hop -> Node 2222
+- (0.23) -> Node 3333; Next hop -> Node 3333
+- (0.42) -> Node 4444; Next hop -> Node 3333
+- (0.33) -> Node 5555; Next hop -> Node 3333
+- (0.58) -> Node 6666; Next hop -> Node 3333
+
+Node 2222:
+[1701909176.9502919] Display Routing Table:
+- (inf) -> Node 1111; Next hop -> Node None
+- (inf) -> Node 3333; Next hop -> Node None
+- (inf) -> Node 4444; Next hop -> Node None
+[1701909182.9670231] Link to 1111: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909182.9670231] Link to 4444: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909182.9670231] Link to 3333: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909183.970976] Link to 1111: 18 packets sent, 7 packets lost, loss rate 0.3888888888888889
+[1701909183.970976] Link to 4444: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909183.970976] Link to 3333: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909184.9757729] Link to 1111: 20 packets sent, 7 packets lost, loss rate 0.35
+[1701909184.9757729] Link to 4444: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909184.9757729] Link to 3333: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909185.976174] Link to 1111: 22 packets sent, 8 packets lost, loss rate 0.36363636363636365
+[1701909185.976174] Link to 4444: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909185.976174] Link to 3333: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909186.979104] Link to 1111: 24 packets sent, 8 packets lost, loss rate 0.3333333333333333
+[1701909186.979104] Link to 4444: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909186.979104] Link to 3333: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909187.982899] Link to 1111: 26 packets sent, 9 packets lost, loss rate 0.34615384615384615
+[1701909187.982899] Link to 4444: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909187.982899] Link to 3333: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909188.982968] Link to 1111: 28 packets sent, 11 packets lost, loss rate 0.39285714285714285
+[1701909188.982968] Link to 4444: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909188.982968] Link to 3333: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909189.98795] Link to 1111: 30 packets sent, 11 packets lost, loss rate 0.36666666666666664
+[1701909189.98795] Link to 4444: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909189.98795] Link to 3333: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909190.990832] Link to 1111: 32 packets sent, 12 packets lost, loss rate 0.375
+[1701909190.990832] Link to 4444: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909190.990832] Link to 3333: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909191.9950762] Link to 1111: 34 packets sent, 12 packets lost, loss rate 0.35294117647058826
+[1701909191.9950762] Link to 4444: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909191.9950762] Link to 3333: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909192.998645] Link to 1111: 36 packets sent, 12 packets lost, loss rate 0.3333333333333333
+[1701909192.998645] Link to 4444: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909192.998645] Link to 3333: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909193.998975] Link to 1111: 38 packets sent, 13 packets lost, loss rate 0.34210526315789475
+[1701909193.998975] Link to 4444: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909193.998975] Link to 3333: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909195.0009751] Link to 1111: 40 packets sent, 13 packets lost, loss rate 0.325
+[1701909195.0009751] Link to 4444: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909195.0009751] Link to 3333: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909196.005592] Display Routing Table:
+- (0.31) -> Node 1111; Next hop -> Node 1111
+- (0.24) -> Node 3333; Next hop -> Node 3333
+- (0.34) -> Node 4444; Next hop -> Node 4444
+- (0.34) -> Node 5555; Next hop -> Node 3333
+- (0.59) -> Node 6666; Next hop -> Node 3333
+
+Node 3333:
+[1701909176.941141] Display Routing Table:
+- (inf) -> Node 1111; Next hop -> Node None
+- (inf) -> Node 2222; Next hop -> Node None
+- (inf) -> Node 4444; Next hop -> Node None
+- (inf) -> Node 5555; Next hop -> Node None
+[1701909182.961239] Link to 5555: 12 packets sent, 2 packets lost, loss rate 0.16666666666666666
+[1701909182.961239] Link to 1111: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909182.961239] Link to 4444: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909182.961239] Link to 2222: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909183.965466] Link to 5555: 14 packets sent, 3 packets lost, loss rate 0.21428571428571427
+[1701909183.965466] Link to 1111: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909183.965466] Link to 4444: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909183.965466] Link to 2222: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909184.9706] Link to 5555: 16 packets sent, 3 packets lost, loss rate 0.1875
+[1701909184.9706] Link to 1111: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909184.9706] Link to 4444: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909184.9706] Link to 2222: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909185.9731898] Link to 5555: 18 packets sent, 3 packets lost, loss rate 0.16666666666666666
+[1701909185.9731898] Link to 1111: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909185.9731898] Link to 4444: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909185.9731898] Link to 2222: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909186.978356] Link to 5555: 20 packets sent, 3 packets lost, loss rate 0.15
+[1701909186.978356] Link to 1111: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909186.978356] Link to 4444: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909186.978356] Link to 2222: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909187.9828951] Link to 5555: 22 packets sent, 3 packets lost, loss rate 0.13636363636363635
+[1701909187.9828951] Link to 1111: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909187.9828951] Link to 4444: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909187.9828951] Link to 2222: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909188.982972] Link to 5555: 24 packets sent, 3 packets lost, loss rate 0.125
+[1701909188.982972] Link to 1111: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909188.982972] Link to 4444: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909188.982972] Link to 2222: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909189.987937] Link to 5555: 26 packets sent, 3 packets lost, loss rate 0.11538461538461539
+[1701909189.987937] Link to 1111: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909189.987937] Link to 4444: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909189.987937] Link to 2222: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909190.989215] Link to 5555: 28 packets sent, 3 packets lost, loss rate 0.10714285714285714
+[1701909190.989215] Link to 1111: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909190.989215] Link to 4444: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909190.989215] Link to 2222: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909191.9899788] Link to 5555: 30 packets sent, 4 packets lost, loss rate 0.13333333333333333
+[1701909191.9899788] Link to 1111: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909191.9899788] Link to 4444: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909191.9899788] Link to 2222: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909192.990865] Link to 5555: 32 packets sent, 4 packets lost, loss rate 0.125
+[1701909192.990865] Link to 1111: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909192.990865] Link to 4444: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909192.990865] Link to 2222: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909193.9933188] Link to 5555: 34 packets sent, 4 packets lost, loss rate 0.11764705882352941
+[1701909193.9933188] Link to 1111: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909193.9933188] Link to 4444: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909193.9933188] Link to 2222: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909194.993697] Link to 5555: 36 packets sent, 4 packets lost, loss rate 0.1111111111111111
+[1701909194.993697] Link to 1111: 22 packets sent, 5 packets lost, loss rate 0.22727272727272727
+[1701909194.993697] Link to 4444: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909194.993697] Link to 2222: 17 packets sent, 4 packets lost, loss rate 0.23529411764705882
+[1701909195.99832] Display Routing Table:
+- (0.1) -> Node 1111; Next hop -> Node 1111
+- (0.2) -> Node 2222; Next hop -> Node 2222
+- (0.19) -> Node 4444; Next hop -> Node 5555
+- (0.11) -> Node 5555; Next hop -> Node 5555
+- (0.36) -> Node 6666; Next hop -> Node 5555
+
+Node 4444:
+[1701909176.9503648] Display Routing Table:
+- (inf) -> Node 2222; Next hop -> Node None
+- (inf) -> Node 3333; Next hop -> Node None
+- (inf) -> Node 5555; Next hop -> Node None
+- (inf) -> Node 6666; Next hop -> Node None
+[1701909182.9670131] Link to 2222: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909182.9670131] Link to 3333: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909182.9670131] Link to 5555: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909183.970989] Link to 2222: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909183.970989] Link to 3333: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909183.970989] Link to 5555: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909183.970989] Link to 6666: 47 packets sent, 25 packets lost, loss rate 0.5319148936170213
+[1701909184.97579] Link to 2222: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909184.97579] Link to 3333: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909184.97579] Link to 5555: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909184.97579] Link to 6666: 49 packets sent, 25 packets lost, loss rate 0.5102040816326531
+[1701909185.978206] Link to 2222: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909185.978206] Link to 3333: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909185.978206] Link to 5555: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909185.978206] Link to 6666: 51 packets sent, 25 packets lost, loss rate 0.49019607843137253
+[1701909186.980792] Link to 2222: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909186.980792] Link to 3333: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909186.980792] Link to 5555: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909186.980792] Link to 6666: 53 packets sent, 27 packets lost, loss rate 0.5094339622641509
+[1701909187.985728] Link to 2222: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909187.985728] Link to 3333: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909187.985728] Link to 5555: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909187.985728] Link to 6666: 55 packets sent, 28 packets lost, loss rate 0.509090909090909
+[1701909188.986826] Link to 2222: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909188.986826] Link to 3333: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909188.986826] Link to 5555: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909188.986826] Link to 6666: 57 packets sent, 28 packets lost, loss rate 0.49122807017543857
+[1701909189.987936] Link to 2222: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909189.987936] Link to 3333: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909189.987936] Link to 5555: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909189.987936] Link to 6666: 59 packets sent, 29 packets lost, loss rate 0.4915254237288136
+[1701909190.9893188] Link to 2222: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909190.9893188] Link to 3333: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909190.9893188] Link to 5555: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909190.9893188] Link to 6666: 61 packets sent, 30 packets lost, loss rate 0.4918032786885246
+[1701909191.994462] Link to 2222: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909191.994462] Link to 3333: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909191.994462] Link to 5555: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909191.994462] Link to 6666: 63 packets sent, 31 packets lost, loss rate 0.49206349206349204
+[1701909192.999617] Link to 2222: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909192.999617] Link to 3333: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909192.999617] Link to 5555: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909192.999617] Link to 6666: 65 packets sent, 33 packets lost, loss rate 0.5076923076923077
+[1701909194.003988] Link to 2222: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909194.003988] Link to 3333: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909194.003988] Link to 5555: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909194.003988] Link to 6666: 67 packets sent, 34 packets lost, loss rate 0.5074626865671642
+[1701909195.0090072] Link to 2222: 29 packets sent, 10 packets lost, loss rate 0.3448275862068966
+[1701909195.0090072] Link to 3333: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909195.0090072] Link to 5555: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909195.0090072] Link to 6666: 69 packets sent, 35 packets lost, loss rate 0.5072463768115942
+[1701909196.00933] Display Routing Table:
+- (0.3) -> Node 2222; Next hop -> Node 2222
+- (0.19) -> Node 3333; Next hop -> Node 5555
+- (0.08) -> Node 5555; Next hop -> Node 5555
+- (0.33) -> Node 6666; Next hop -> Node 5555
+- (0.29) -> Node 1111; Next hop -> Node 5555
+
+Node 5555:
+[1701909176.948977] Display Routing Table:
+- (inf) -> Node 3333; Next hop -> Node None
+- (inf) -> Node 4444; Next hop -> Node None
+- (inf) -> Node 6666; Next hop -> Node None
+[1701909182.969393] Link to 3333: 12 packets sent, 2 packets lost, loss rate 0.16666666666666666
+[1701909182.969393] Link to 4444: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909182.969393] Link to 6666: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909183.970988] Link to 3333: 14 packets sent, 3 packets lost, loss rate 0.21428571428571427
+[1701909183.970988] Link to 4444: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909183.970988] Link to 6666: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909184.975789] Link to 3333: 16 packets sent, 3 packets lost, loss rate 0.1875
+[1701909184.975789] Link to 4444: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909184.975789] Link to 6666: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909185.978601] Link to 3333: 18 packets sent, 3 packets lost, loss rate 0.16666666666666666
+[1701909185.978601] Link to 4444: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909185.978601] Link to 6666: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909186.9837272] Link to 3333: 20 packets sent, 3 packets lost, loss rate 0.15
+[1701909186.9837272] Link to 4444: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909186.9837272] Link to 6666: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909187.9888058] Link to 3333: 22 packets sent, 3 packets lost, loss rate 0.13636363636363635
+[1701909187.9888058] Link to 4444: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909187.9888058] Link to 6666: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909188.9927669] Link to 3333: 24 packets sent, 3 packets lost, loss rate 0.125
+[1701909188.9927669] Link to 4444: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909188.9927669] Link to 6666: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909189.993195] Link to 3333: 26 packets sent, 3 packets lost, loss rate 0.11538461538461539
+[1701909189.993195] Link to 4444: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909189.993195] Link to 6666: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909190.9936771] Link to 3333: 28 packets sent, 3 packets lost, loss rate 0.10714285714285714
+[1701909190.9936771] Link to 4444: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909190.9936771] Link to 6666: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909191.9950788] Link to 3333: 30 packets sent, 4 packets lost, loss rate 0.13333333333333333
+[1701909191.9950788] Link to 4444: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909191.9950788] Link to 6666: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909192.999616] Link to 3333: 32 packets sent, 4 packets lost, loss rate 0.125
+[1701909192.999616] Link to 4444: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909192.999616] Link to 6666: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909194.003983] Link to 3333: 34 packets sent, 4 packets lost, loss rate 0.11764705882352941
+[1701909194.003983] Link to 4444: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909194.003983] Link to 6666: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909195.008991] Link to 3333: 36 packets sent, 4 packets lost, loss rate 0.1111111111111111
+[1701909195.008991] Link to 4444: 12 packets sent, 1 packets lost, loss rate 0.08333333333333333
+[1701909195.008991] Link to 6666: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909196.0093372] Display Routing Table:
+- (0.11) -> Node 3333; Next hop -> Node 3333
+- (0.08) -> Node 4444; Next hop -> Node 4444
+- (0.25) -> Node 6666; Next hop -> Node 6666
+- (0.21) -> Node 1111; Next hop -> Node 3333
+- (0.31) -> Node 2222; Next hop -> Node 3333
+
+Node 6666:
+[1701909176.9401631] Display Routing Table:
+- (inf) -> Node 4444; Next hop -> Node None
+- (inf) -> Node 5555; Next hop -> Node None
+[1701909182.9650218] Link to 5555: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909183.965466] Link to 5555: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909183.965466] Link to 4444: 47 packets sent, 25 packets lost, loss rate 0.5319148936170213
+[1701909184.9705951] Link to 5555: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909184.9705951] Link to 4444: 49 packets sent, 25 packets lost, loss rate 0.5102040816326531
+[1701909185.972453] Link to 5555: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909185.972453] Link to 4444: 51 packets sent, 25 packets lost, loss rate 0.49019607843137253
+[1701909186.9775648] Link to 5555: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909186.9775648] Link to 4444: 53 packets sent, 27 packets lost, loss rate 0.5094339622641509
+[1701909187.978404] Link to 5555: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909187.978404] Link to 4444: 55 packets sent, 28 packets lost, loss rate 0.509090909090909
+[1701909188.980809] Link to 5555: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909188.980809] Link to 4444: 57 packets sent, 28 packets lost, loss rate 0.49122807017543857
+[1701909189.9831302] Link to 5555: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909189.9831302] Link to 4444: 59 packets sent, 29 packets lost, loss rate 0.4915254237288136
+[1701909190.985793] Link to 5555: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909190.985793] Link to 4444: 61 packets sent, 30 packets lost, loss rate 0.4918032786885246
+[1701909191.9880068] Link to 5555: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909191.9880068] Link to 4444: 63 packets sent, 31 packets lost, loss rate 0.49206349206349204
+[1701909192.993147] Link to 5555: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909192.993147] Link to 4444: 65 packets sent, 33 packets lost, loss rate 0.5076923076923077
+[1701909193.9933188] Link to 5555: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909193.9933188] Link to 4444: 67 packets sent, 34 packets lost, loss rate 0.5074626865671642
+[1701909194.993682] Link to 5555: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909194.993682] Link to 4444: 69 packets sent, 35 packets lost, loss rate 0.5072463768115942
+[1701909195.99832] Display Routing Table:
+- (0.3) -> Node 4444; Next hop -> Node 5555
+- (0.2) -> Node 5555; Next hop -> Node 5555
+- (0.56) -> Node 2222; Next hop -> Node 5555
+- (0.36) -> Node 3333; Next hop -> Node 5555
+- (0.46) -> Node 1111; Next hop -> Node 5555
+
+Commands: (A circle)
+python cnnode.py 1111 receive 5555 0.3 send 2222
+python cnnode.py 2222 receive 1111 0.3 send 3333
+python cnnode.py 3333 receive 2222 0.3 send 4444
+python cnnode.py 4444 receive 3333 0.3 send 5555
+python cnnode.py 5555 receive 4444 0.3 send 1111 last
+
+Results:
+Node 1111:
+[1701909566.0048058] Display Routing Table:
+- (inf) -> Node 5555; Next hop -> Node None
+- (inf) -> Node 2222; Next hop -> Node None
+[1701909572.025147] Link to 5555: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909572.025147] Link to 2222: 18 packets sent, 5 packets lost, loss rate 0.2777777777777778
+[1701909573.025383] Link to 5555: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909573.025383] Link to 2222: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909574.0285099] Link to 5555: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909574.0285099] Link to 2222: 22 packets sent, 7 packets lost, loss rate 0.3181818181818182
+[1701909575.031117] Link to 5555: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909575.031117] Link to 2222: 24 packets sent, 7 packets lost, loss rate 0.2916666666666667
+[1701909576.036232] Link to 5555: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909576.036232] Link to 2222: 26 packets sent, 7 packets lost, loss rate 0.2692307692307692
+[1701909577.039398] Link to 5555: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909577.039398] Link to 2222: 28 packets sent, 8 packets lost, loss rate 0.2857142857142857
+[1701909578.043652] Link to 5555: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909578.043652] Link to 2222: 30 packets sent, 9 packets lost, loss rate 0.3
+[1701909579.04877] Link to 5555: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909579.04877] Link to 2222: 32 packets sent, 9 packets lost, loss rate 0.28125
+[1701909580.0514638] Link to 5555: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909580.0514638] Link to 2222: 34 packets sent, 9 packets lost, loss rate 0.2647058823529412
+[1701909581.055527] Link to 5555: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909581.055527] Link to 2222: 36 packets sent, 10 packets lost, loss rate 0.2777777777777778
+[1701909582.058536] Link to 5555: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909582.058536] Link to 2222: 38 packets sent, 10 packets lost, loss rate 0.2631578947368421
+[1701909583.060989] Link to 5555: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909583.060989] Link to 2222: 40 packets sent, 11 packets lost, loss rate 0.275
+[1701909584.0649002] Link to 5555: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909584.0649002] Link to 2222: 42 packets sent, 12 packets lost, loss rate 0.2857142857142857
+[1701909585.069221] Display Routing Table:
+- (0.3) -> Node 5555; Next hop -> Node 5555
+- (0.25) -> Node 2222; Next hop -> Node 2222
+- (0.68) -> Node 3333; Next hop -> Node 2222
+- (0.55) -> Node 4444; Next hop -> Node 5555
+
+Node 2222:
+[1701909566.005261] Display Routing Table:
+- (inf) -> Node 1111; Next hop -> Node None
+- (inf) -> Node 3333; Next hop -> Node None
+[1701909572.0208268] Link to 1111: 18 packets sent, 5 packets lost, loss rate 0.2777777777777778
+[1701909572.0208268] Link to 3333: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909573.02351] Link to 1111: 20 packets sent, 5 packets lost, loss rate 0.25
+[1701909573.02351] Link to 3333: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909574.028061] Link to 1111: 22 packets sent, 7 packets lost, loss rate 0.3181818181818182
+[1701909574.028061] Link to 3333: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909575.031111] Link to 1111: 24 packets sent, 7 packets lost, loss rate 0.2916666666666667
+[1701909575.031111] Link to 3333: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909576.035658] Link to 1111: 26 packets sent, 7 packets lost, loss rate 0.2692307692307692
+[1701909576.035658] Link to 3333: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909577.036114] Link to 1111: 28 packets sent, 8 packets lost, loss rate 0.2857142857142857
+[1701909577.036114] Link to 3333: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909578.037166] Link to 1111: 30 packets sent, 9 packets lost, loss rate 0.3
+[1701909578.037166] Link to 3333: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909579.040148] Link to 1111: 32 packets sent, 9 packets lost, loss rate 0.28125
+[1701909579.040148] Link to 3333: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909580.045346] Link to 1111: 34 packets sent, 9 packets lost, loss rate 0.2647058823529412
+[1701909580.045346] Link to 3333: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909581.046785] Link to 1111: 36 packets sent, 10 packets lost, loss rate 0.2777777777777778
+[1701909581.046785] Link to 3333: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909582.049448] Link to 1111: 38 packets sent, 10 packets lost, loss rate 0.2631578947368421
+[1701909582.049448] Link to 3333: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909583.0533981] Link to 1111: 40 packets sent, 11 packets lost, loss rate 0.275
+[1701909583.0533981] Link to 3333: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909584.05857] Link to 1111: 42 packets sent, 12 packets lost, loss rate 0.2857142857142857
+[1701909584.05857] Link to 3333: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909585.061583] Display Routing Table:
+- (0.25) -> Node 1111; Next hop -> Node 1111
+- (0.43) -> Node 3333; Next hop -> Node 3333
+- (0.55) -> Node 5555; Next hop -> Node 1111
+- (0.83) -> Node 4444; Next hop -> Node 1111
+
+Node 3333:
+[1701909565.9978812] Display Routing Table:
+- (inf) -> Node 2222; Next hop -> Node None
+- (inf) -> Node 4444; Next hop -> Node None
+[1701909572.021918] Link to 4444: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909572.021918] Link to 2222: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909573.026264] Link to 4444: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909573.026264] Link to 2222: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909574.027762] Link to 4444: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909574.027762] Link to 2222: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909575.029307] Link to 4444: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909575.029307] Link to 2222: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909576.031509] Link to 4444: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909576.031509] Link to 2222: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909577.032984] Link to 4444: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909577.032984] Link to 2222: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909578.035608] Link to 4444: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909578.035608] Link to 2222: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909579.040799] Link to 4444: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909579.040799] Link to 2222: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909580.042197] Link to 4444: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909580.042197] Link to 2222: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909581.0474281] Link to 4444: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909581.0474281] Link to 2222: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909582.049448] Link to 4444: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909582.049448] Link to 2222: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909583.055465] Link to 4444: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909583.055465] Link to 2222: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909584.060701] Link to 4444: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909584.060701] Link to 2222: 21 packets sent, 9 packets lost, loss rate 0.42857142857142855
+[1701909585.0653172] Display Routing Table:
+- (0.3) -> Node 2222; Next hop -> Node 2222
+- (0.44) -> Node 4444; Next hop -> Node 4444
+- (0.69) -> Node 5555; Next hop -> Node 4444
+- (0.59) -> Node 1111; Next hop -> Node 2222
+
+Node 4444:
+[1701909566.005245] Display Routing Table:
+- (inf) -> Node 3333; Next hop -> Node None
+- (inf) -> Node 5555; Next hop -> Node None
+[1701909572.025147] Link to 3333: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909572.025147] Link to 5555: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909573.02635] Link to 3333: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909573.02635] Link to 5555: 18 packets sent, 5 packets lost, loss rate 0.2777777777777778
+[1701909574.029293] Link to 3333: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909574.029293] Link to 5555: 20 packets sent, 6 packets lost, loss rate 0.3
+[1701909575.031122] Link to 3333: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909575.031122] Link to 5555: 22 packets sent, 6 packets lost, loss rate 0.2727272727272727
+[1701909576.034209] Link to 3333: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909576.034209] Link to 5555: 24 packets sent, 6 packets lost, loss rate 0.25
+[1701909577.039366] Link to 3333: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909577.039366] Link to 5555: 26 packets sent, 7 packets lost, loss rate 0.2692307692307692
+[1701909578.041589] Link to 3333: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909578.041589] Link to 5555: 28 packets sent, 7 packets lost, loss rate 0.25
+[1701909579.0467288] Link to 3333: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909579.0467288] Link to 5555: 30 packets sent, 9 packets lost, loss rate 0.3
+[1701909580.051887] Link to 3333: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909580.051887] Link to 5555: 32 packets sent, 10 packets lost, loss rate 0.3125
+[1701909581.0541692] Link to 3333: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909581.0541692] Link to 5555: 34 packets sent, 10 packets lost, loss rate 0.29411764705882354
+[1701909582.0550148] Link to 3333: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909582.0550148] Link to 5555: 36 packets sent, 10 packets lost, loss rate 0.2777777777777778
+[1701909583.060127] Link to 3333: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909583.060127] Link to 5555: 38 packets sent, 11 packets lost, loss rate 0.2894736842105263
+[1701909584.0648918] Link to 3333: 27 packets sent, 12 packets lost, loss rate 0.4444444444444444
+[1701909584.0648918] Link to 5555: 40 packets sent, 11 packets lost, loss rate 0.275
+[1701909585.0660899] Display Routing Table:
+- (0.44) -> Node 3333; Next hop -> Node 3333
+- (0.25) -> Node 5555; Next hop -> Node 5555
+- (0.55) -> Node 1111; Next hop -> Node 5555
+- (0.74) -> Node 2222; Next hop -> Node 3333
+
+Node 5555:
+[1701909566.00017] Display Routing Table:
+- (inf) -> Node 4444; Next hop -> Node None
+- (inf) -> Node 1111; Next hop -> Node None
+[1701909572.0278358] Link to 1111: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909572.0278358] Link to 4444: 16 packets sent, 5 packets lost, loss rate 0.3125
+[1701909573.029691] Link to 1111: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909573.029691] Link to 4444: 18 packets sent, 5 packets lost, loss rate 0.2777777777777778
+[1701909574.034333] Link to 1111: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909574.034333] Link to 4444: 20 packets sent, 6 packets lost, loss rate 0.3
+[1701909575.03522] Link to 1111: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909575.03522] Link to 4444: 22 packets sent, 6 packets lost, loss rate 0.2727272727272727
+[1701909576.035737] Link to 1111: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909576.035737] Link to 4444: 24 packets sent, 6 packets lost, loss rate 0.25
+[1701909577.040521] Link to 1111: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909577.040521] Link to 4444: 26 packets sent, 7 packets lost, loss rate 0.2692307692307692
+[1701909578.041717] Link to 1111: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909578.041717] Link to 4444: 28 packets sent, 7 packets lost, loss rate 0.25
+[1701909579.048386] Link to 1111: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909579.048386] Link to 4444: 30 packets sent, 9 packets lost, loss rate 0.3
+[1701909580.051454] Link to 1111: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909580.051454] Link to 4444: 32 packets sent, 10 packets lost, loss rate 0.3125
+[1701909581.05383] Link to 1111: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909581.05383] Link to 4444: 34 packets sent, 10 packets lost, loss rate 0.29411764705882354
+[1701909582.058182] Link to 1111: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909582.058182] Link to 4444: 36 packets sent, 10 packets lost, loss rate 0.2777777777777778
+[1701909583.06279] Link to 1111: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909583.06279] Link to 4444: 38 packets sent, 11 packets lost, loss rate 0.2894736842105263
+[1701909584.065012] Link to 1111: 23 packets sent, 7 packets lost, loss rate 0.30434782608695654
+[1701909584.065012] Link to 4444: 40 packets sent, 11 packets lost, loss rate 0.275
+[1701909585.0692952] Display Routing Table:
+- (0.25) -> Node 4444; Next hop -> Node 4444
+- (0.3) -> Node 1111; Next hop -> Node 1111
+- (0.55) -> Node 2222; Next hop -> Node 1111
+- (0.69) -> Node 3333; Next hop -> Node 4444
